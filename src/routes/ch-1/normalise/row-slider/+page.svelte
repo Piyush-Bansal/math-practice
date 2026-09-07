@@ -28,7 +28,7 @@
 		<div
 			class="card-wrapper"
 			bind:offsetWidth={cardWrapperWidth}
-			style:transform={`translateX(${movement})px`}
+			style:transform={`translateX(${movement}px)`}
 		>
 			{#each { length: 7 }}
 				<div class="card | ar-16-9"></div>
