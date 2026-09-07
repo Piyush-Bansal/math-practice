@@ -1,0 +1,46 @@
+@use '../../../abstract/_mixins' as *;
+$-ico-frame-edge-padding: (
+	s-ico-edge-x: (
+		large: 13.5,
+		medium: 1,
+		small: 3
+	),
+	s-ico-edge-y: (
+		large: 11.5,
+		medium: 0,
+		small: 0
+	),
+	m-ico-edge-x: (
+		large: 14.5,
+		medium: 1.5,
+		small: 4.5
+	),
+	m-ico-edge-y: (
+		large: 12.5,
+		medium: 0.5,
+		small: 1.5
+	),
+	l-ico-edge-x: (
+		large: 18,
+		medium: 5,
+		small: 7
+	),
+	l-ico-edge-y: (
+		large: 16,
+		medium: 4,
+		small: 4
+	)
+);
+
+@include map-to-var-breakpoints(
+	$map: $-ico-frame-edge-padding,
+	$key-prefix: 'framed-',
+	$convert-to-em: true
+);
+
+$framed-s-ico-edge-x: var(--framed-s-ico-edge-x);
+$framed-s-ico-edge-y: var(--framed-s-ico-edge-y);
+$framed-m-ico-edge-x: var(--framed-m-ico-edge-x);
+$framed-m-ico-edge-y: var(--framed-m-ico-edge-y);
+$framed-l-ico-edge-x: var(--framed-l-ico-edge-x);
+$framed-l-ico-edge-y: var(--framed-l-ico-edge-y);

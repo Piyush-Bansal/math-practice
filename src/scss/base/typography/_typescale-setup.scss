@@ -1,0 +1,151 @@
+@use './mixins' as *;
+@use '../../tokens/primitive/typography' as *;
+@use '../../tokens/functional' as *;
+
+//Small caption
+.small-caption {
+	font-size: $fs-small-caption;
+	line-height: $lh-small-caption;
+	letter-spacing: $ls-small-caption;
+
+	& .uppercase {
+		text-transform: uppercase;
+		line-height: $uppercase-lh-small-caption;
+		letter-spacing: $uppercase-ls-small-caption;
+	}
+}
+
+//Caption
+.caption {
+	font-size: $fs-caption;
+	line-height: $lh-caption;
+	letter-spacing: $ls-caption;
+
+	& .uppercase {
+		text-transform: uppercase;
+		line-height: $uppercase-lh-caption;
+		letter-spacing: $uppercase-ls-caption;
+	}
+}
+
+//Body
+p,
+li,
+a {
+	font-size: $fs-body;
+	@include body-settings;
+	@include stylistic-sets-base;
+}
+
+p.uppercase {
+	letter-spacing: $uppercase-ls-body;
+	line-height: $uppercase-lh-body;
+	text-transform: uppercase;
+}
+
+a {
+	color: $clr-text-action;
+	text-decoration-thickness: $stroke-hairline;
+}
+
+%font-family-accent {
+	font-family: $ff-accent;
+}
+
+//H4
+h4 {
+	@include font-family-accent;
+	font-size: $fs-h4;
+	line-height: $lh-h4;
+	letter-spacing: $ls-h4;
+
+	& .uppercase {
+		text-transform: uppercase;
+		line-height: $uppercase-lh-h4;
+		letter-spacing: $uppercase-ls-h4;
+	}
+}
+
+//H3
+h3 {
+	@include font-family-accent;
+	font-size: $fs-h3;
+	line-height: $lh-h3;
+	letter-spacing: $ls-h3;
+
+	& .uppercase {
+		text-transform: uppercase;
+		line-height: $uppercase-lh-h3;
+		letter-spacing: $uppercase-ls-h3;
+	}
+}
+
+//H2
+h2 {
+	@include font-family-accent;
+	font-size: $fs-h2;
+	line-height: $lh-h2;
+	letter-spacing: $ls-h2;
+
+	& .uppercase {
+		text-transform: uppercase;
+		line-height: $uppercase-lh-h2;
+		letter-spacing: $uppercase-ls-h2;
+	}
+}
+
+//H1
+h1 {
+	@include font-family-accent;
+	font-size: $fs-h1;
+	line-height: $lh-h1;
+	letter-spacing: $ls-h1;
+
+	& .uppercase {
+		text-transform: uppercase;
+		line-height: $uppercase-lh-h1;
+		letter-spacing: $uppercase-ls-h1;
+	}
+}
+
+//xl
+.xl {
+	@include font-family-accent;
+	font-size: $fs-xl;
+	line-height: $lh-xl;
+	letter-spacing: $ls-xl;
+
+	& .uppercase {
+		text-transform: uppercase;
+		line-height: $uppercase-lh-xl;
+		letter-spacing: $uppercase-ls-xl;
+	}
+}
+
+//xxl
+.xxl {
+	@include font-family-accent;
+	font-size: $fs-xxl;
+	line-height: $lh-xxl;
+	letter-spacing: $ls-xxl;
+
+	& .uppercase {
+		text-transform: uppercase;
+		line-height: $uppercase-lh-xxl;
+		letter-spacing: $uppercase-ls-xxl;
+	}
+}
+
+//xxxl
+.xxxl {
+	@include font-family-accent;
+	font-size: $fs-xxxl;
+	line-height: $lh-xxxl;
+	letter-spacing: $ls-xxxl;
+
+	& .uppercase {
+		text-transform: uppercase;
+		line-height: $uppercase-lh-xxxl;
+		letter-spacing: $uppercase-ls-xxxl;
+	}
+}

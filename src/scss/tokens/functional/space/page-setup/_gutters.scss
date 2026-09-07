@@ -1,0 +1,24 @@
+@use '../../../../abstract/_mixins' as *;
+@use '../../../primitive/spacers' as *;
+
+$page-full-gutter: (
+	gutter: (
+		large: $spacer-1,
+		medium: $spacer-1,
+		small: $spacer-1
+	)
+);
+
+$-page-half-gutter: (
+	half-gutter: (
+		large: 9,
+		medium: 8.5,
+		small: 9.5
+	)
+);
+
+@include map-to-var-breakpoints($page-full-gutter);
+@include map-to-var-breakpoints($map: $-page-half-gutter, $convert-to-em: true);
+
+$gutter: var(--gutter);
+$half-gutter: var(--half-gutter);

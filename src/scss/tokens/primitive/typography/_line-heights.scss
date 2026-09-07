@@ -1,0 +1,70 @@
+@use '../../../abstract/mixins' as *;
+@use './font-sizes' as *;
+
+//line height
+$line-height-default: (
+	small-caption: (
+		large: 13,
+		medium: 13,
+		small: 15
+	),
+	caption: (
+		large: 15,
+		medium: 14,
+		small: 17
+	),
+	body: (
+		large: 18,
+		medium: 17,
+		small: 19
+	),
+	h4: (
+		large: 26,
+		medium: 24,
+		small: 24
+	),
+	h3: (
+		large: 32,
+		medium: 34,
+		small: 30
+	),
+	h2: (
+		large: 45,
+		medium: 42,
+		small: 38
+	),
+	h1: (
+		large: 64,
+		medium: 59,
+		small: 42
+	),
+	xl: (
+		large: 90,
+		medium: 84,
+		small: 60
+	),
+	xxl: (
+		large: 128,
+		medium: 119,
+		small: 70
+	),
+	xxxl: (
+		large: 180,
+		medium: 168,
+		small: 95
+	)
+);
+
+@include map-to-var-breakpoints($line-height-default, 'lh-', true);
+
+$lh-small-caption: var(--lh-small-caption);
+$lh-caption: var(--lh-caption);
+$lh-body: var(--lh-body);
+$lh-h5: var(--lh-h5);
+$lh-h4: var(--lh-h4);
+$lh-h3: var(--lh-h3);
+$lh-h2: var(--lh-h2);
+$lh-h1: var(--lh-h1);
+$lh-xl: var(--lh-xl);
+$lh-xxl: var(--lh-xxl);
+$lh-xxxl: var(--lh-xxxl);

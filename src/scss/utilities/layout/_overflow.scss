@@ -1,0 +1,55 @@
+.overflow-auto {
+	overflow: auto;
+
+	&-x {
+		overflow-x: auto;
+	}
+
+	&-y {
+		overflow-y: auto;
+	}
+}
+
+.overflow-hidden {
+	overflow: hidden;
+
+	&-x {
+		overflow-x: hidden;
+		// overflow-y: visible;
+	}
+
+	&-y {
+		overflow-x: visible;
+		// overflow-y: hidden;
+	}
+}
+
+.overflow-clip {
+	overflow: clip;
+
+	&-x {
+		overflow-x: clip;
+		// overflow-y: visible;
+	}
+
+	&-y {
+		overflow-x: visible;
+		// overflow-y: clip;
+	}
+}
+
+.overflow-visible {
+	overflow: visible;
+}
+
+.overflow-scroll {
+	overflow: scroll;
+
+	&-x {
+		overflow-x: scroll;
+	}
+
+	&-y {
+		overflow-y: scroll;
+	}
+}

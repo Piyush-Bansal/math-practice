@@ -1,0 +1,45 @@
+@use '../../../../abstract/_mixins' as *;
+@use '../../../semantic/space/_large-gaps' as *;
+@use '../../../semantic/space/_small-gaps' as *;
+
+$-ico-v-gap: (
+	s-ico-v-gap-default: (
+		large: $sm-gap-5,
+		medium: $sm-gap-5,
+		small: $sm-gap-5
+	),
+	s-ico-v-gap-spaced: (
+		large: $sm-gap-7,
+		medium: $sm-gap-7,
+		small: $sm-gap-8
+	),
+	m-ico-v-gap-default: (
+		large: $sm-gap-5,
+		medium: $sm-gap-5,
+		small: $sm-gap-5
+	),
+	m-ico-v-gap-spaced: (
+		large: $sm-gap-7,
+		medium: $sm-gap-7,
+		small: $sm-gap-9
+	),
+	l-ico-v-gap-default: (
+		large: $sm-gap-6,
+		medium: $sm-gap-6,
+		small: $sm-gap-6
+	),
+	l-ico-v-gap-spaced: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	)
+);
+
+@include map-to-var-breakpoints($-ico-v-gap);
+
+$-s-ico-v-gap-default: var(--s-ico-v-gap-default);
+$-s-ico-v-gap-spaced: var(--s-ico-v-gap-spaced);
+$-m-ico-v-gap-default: var(--m-ico-v-gap-default);
+$-m-ico-v-gap-spaced: var(--m-ico-v-gap-spaced);
+$-l-ico-v-gap-default: var(--l-ico-v-gap-default);
+$-l-ico-v-gap-spaced: var(--l-ico-v-gap-spaced);

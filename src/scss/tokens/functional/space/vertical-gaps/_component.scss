@@ -1,0 +1,57 @@
+@use '../../../../abstract/_mixins' as *;
+@use '../../../semantic/space/_large-gaps' as *;
+@use '../../../semantic/space/_small-gaps' as *;
+
+$-component-v-gap: (
+	s-v-gap-default: (
+		large: $sm-gap-6,
+		medium: $sm-gap-6,
+		small: $sm-gap-6
+	),
+	s-v-gap-spaced: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	),
+	m-v-gap-default: (
+		large: $sm-gap-7,
+		medium: $sm-gap-7,
+		small: $sm-gap-8
+	),
+	m-v-gap-spaced: (
+		large: $lg-gap-2,
+		medium: $lg-gap-2,
+		small: $lg-gap-3
+	),
+	l-v-gap-default: (
+		large: $sm-gap-8,
+		medium: $sm-gap-8,
+		small: $sm-gap-9
+	),
+	l-v-gap-spaced: (
+		large: $lg-gap-3,
+		medium: $lg-gap-3,
+		small: $lg-gap-4
+	),
+	xl-v-gap-default: (
+		large: $lg-gap-2,
+		medium: $lg-gap-2,
+		small: $lg-gap-2
+	),
+	xl-v-gap-spaced: (
+		large: $lg-gap-4,
+		medium: $lg-gap-4,
+		small: $lg-gap-6
+	)
+);
+
+@include map-to-var-breakpoints($-component-v-gap);
+
+$-s-v-gap-default: var(--s-v-gap-default);
+$-s-v-gap-spaced: var(--s-v-gap-spaced);
+$-m-v-gap-default: var(--m-v-gap-default);
+$-m-v-gap-spaced: var(--m-v-gap-spaced);
+$-l-v-gap-default: var(--l-v-gap-default);
+$-l-v-gap-spaced: var(--l-v-gap-spaced);
+$-xl-v-gap-default: var(--xl-v-gap-default);
+$-xl-v-gap-spaced: var(--xl-v-gap-spaced);

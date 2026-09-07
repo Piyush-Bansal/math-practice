@@ -1,0 +1,45 @@
+@use '../../../semantic/size/_micro-widths.scss' as *;
+@use '../../../semantic/size/_width.scss' as *;
+@use '../../../../abstract/_mixins.scss' as *;
+
+$-ctrl-span: (
+	quarter: (
+		large: $micro-width-l,
+		medium: $micro-width-l,
+		small: $micro-width-l
+	),
+	half: (
+		large: $micro-width-xxl,
+		medium: $micro-width-xxl,
+		small: $micro-width-xxl
+	),
+	base: (
+		large: $micro-width-xxxxl,
+		medium: $micro-width-xxxxl,
+		small: $micro-width-xxxxxl
+	),
+	double: (
+		large: $width-3,
+		medium: $width-3,
+		small: $width-3
+	),
+	quad: (
+		large: $width-5,
+		medium: $width-5,
+		small: $width-6
+	),
+	hex: (
+		large: $width-6,
+		medium: $width-6,
+		small: $width-8
+	)
+);
+
+@include map-to-var-breakpoints($-ctrl-span, 'point-span-');
+
+$point-span-quarter: var(--point-span-quarter);
+$point-span-half: var(--point-span-half);
+$point-span-base: var(--point-span-base);
+$point-span-double: var(--point-span-double);
+$point-span-quad: var(--point-span-quad);
+$point-span-hex: var(--point-span-hex);

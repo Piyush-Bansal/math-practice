@@ -1,0 +1,29 @@
+@use '../../../../../abstract/_mixins.scss' as *;
+
+$-framed: (
+	caption-ico-offset: (
+		large: 8,
+		medium: 20,
+		small: 19
+	),
+	body-ico-offset: (
+		large: 7.5,
+		medium: 19.5,
+		small: 18.5
+	),
+	h4-ico-offset: (
+		large: 5,
+		medium: 17.5,
+		small: 17
+	)
+);
+
+@include map-to-var-breakpoints(
+	$map: $-framed,
+	$key-prefix: 'framed',
+	$convert-to-em: true
+);
+
+$framed-caption-ico-offset: var(--framed-caption-ico-offset);
+$framed-body-ico-offset: var(--framed-body-ico-offset);
+$framed-h4-ico-offset: var(--framed-h4-ico-offset);

@@ -1,0 +1,19 @@
+@for $i from 1 through 12 {
+	.flex-order-#{$i} {
+		order: $i;
+	}
+}
+
+.flex-order {
+	&-first {
+		order: -9999;
+	}
+
+	&-last {
+		order: 9999;
+	}
+
+	&-none {
+		order: 0;
+	}
+}

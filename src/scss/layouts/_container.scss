@@ -1,0 +1,25 @@
+@use '../tokens/functional/space/page-setup/_gutters' as *;
+@use '../tokens/functional/space/page-setup/_page-margins' as *;
+
+.container {
+	margin-inline: auto;
+	padding-inline: $page-margins;
+
+	&[data-size='full'] {
+		padding-inline: 0;
+	}
+
+	&[data-size='right-extended'] {
+		padding-left: $page-margins;
+		padding-right: calc($page-margins - $half-gutter);
+	}
+
+	&[data-size='left-extended'] {
+		padding-left: calc($page-margins - $half-gutter);
+		padding-right: $page-margins;
+	}
+
+	&[data-size='left-right-extended'] {
+		padding-inline: calc($page-margins - $half-gutter);
+	}
+}

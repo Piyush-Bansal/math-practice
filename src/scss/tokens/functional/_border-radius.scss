@@ -1,0 +1,39 @@
+@use '../semantic/border/_border-radius' as *;
+@use '../../abstract/_mixins' as *;
+@use '../semantic/border/_border-radius' as *;
+
+$-br: (
+	tight: (
+		large: $br-s,
+		medium: $br-s,
+		small: $br-s
+	),
+	default: (
+		large: $br-l,
+		medium: $br-l,
+		small: $br-l
+	),
+	soft: (
+		large: $br-xxl,
+		medium: $br-xxl,
+		small: $br-xxl
+	),
+	large: (
+		large: $br-xxxxl,
+		medium: $br-xxxxl,
+		small: $br-xxxxl
+	),
+	full: (
+		large: $br-50,
+		medium: $br-50,
+		small: $br-50
+	)
+);
+
+@include map-to-var-breakpoints($-br, 'br-');
+
+$br-tight: var(--br-tight);
+$br-default: var(--br-default);
+$br-soft: var(--br-soft);
+$br-large: var(--br-large);
+$br-full: var(--br-full);

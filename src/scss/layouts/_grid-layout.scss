@@ -1,0 +1,108 @@
+/*
+|--------------------------------------------------------------------------
+| Grid Layout Serialization
+|--------------------------------------------------------------------------
+|
+| Format:
+|
+| grid-[row-1]--[row-2]--[row-3]
+|
+| Each row contains one or more regions.
+| Regions are separated using `_`
+|
+| Region syntax:
+|
+| [start-column]-[end-column]
+|
+|--------------------------------------------------------------------------
+| Examples
+|--------------------------------------------------------------------------
+|
+| Single region across one row
+|
+| grid-7-14
+|
+| → occupies columns 7 through 14
+|
+|--------------------------------------------------------------------------
+|
+| Multiple rows
+|
+| grid-7-14--2-13--1-16
+|
+| Row 1 → 7-14
+| Row 2 → 2-13
+| Row 3 → 1-16
+|
+|--------------------------------------------------------------------------
+|
+| Multiple regions inside a row
+|
+| grid-1-3_7-12
+|
+| Row 1:
+| → region 1 occupies 1-3
+| → region 2 occupies 7-12
+|
+|--------------------------------------------------------------------------
+|
+| Complex composition
+|
+| grid-7-14--1-3_7-12--2-5_9-13
+|
+| Row 1:
+| → 7-14
+|
+| Row 2:
+| → 1-3
+| → 7-12
+|
+| Row 3:
+| → 2-5
+| → 9-13
+|
+|--------------------------------------------------------------------------
+|
+| Notes
+|--------------------------------------------------------------------------
+|
+| `--` = row separator
+| `_`  = region separator
+|
+| This is a spatial serialization format,
+| not a semantic naming system.
+|
+| Purpose:
+| - distinguish bespoke layouts
+| - enable reuse discovery
+| - allow partial visual reconstruction
+| - remain CSS-safe and human-readable
+|
+*/
+
+/* .grid-7-14--1-3_7-12--2-5_9-13 {
+| 	grid-template-areas:
+| 		'. . . . . . sec-1 sec-1 sec-1 sec-1 sec-1 sec-1 sec-1 sec-1 . .'
+| 		'sec-2 sec-2 sec-2 . . . sec-3 sec-3 sec-3 sec-3 sec-3 sec-3 . . . .'
+| 		'. sec-4 sec-4 sec-4 sec-4 . . . sec-5 sec-5 sec-5 sec-5 sec-5 . . .';
+| }
+*/
+
+/* PERSONAL NOTES
+| Try creating simpler macro grids 1_1_1_1 
+| Subdivide it further
+| Do not add md, sm, keep them small and composable
+| Use extends to change composition at breakpoints
+|
+| .component {
+|   @extend .grid-a;
+|
+|   @media (...) {
+|     @extend .grid-b;
+|   }
+|
+|   @media (...) {
+|     @extend .grid-c;
+|   }
+| }
+*/

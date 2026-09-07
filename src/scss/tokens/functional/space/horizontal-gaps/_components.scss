@@ -1,0 +1,57 @@
+@use '../../../../abstract/_mixins' as *;
+@use '../../../semantic/space/_large-gaps' as *;
+@use '../../../semantic/space/_small-gaps' as *;
+
+$-components-h-gap: (
+	sm-h-gap-default: (
+		large: $sm-gap-6,
+		medium: $sm-gap-6,
+		small: $sm-gap-6
+	),
+	sm-h-gap-spaced: (
+		large: $sm-gap-7,
+		medium: $sm-gap-7,
+		small: $sm-gap-8
+	),
+	m-h-gap-default: (
+		large: $sm-gap-7,
+		medium: $sm-gap-7,
+		small: $sm-gap-8
+	),
+	m-h-gap-spaced: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	),
+	l-h-gap-default: (
+		large: $sm-gap-8,
+		medium: $sm-gap-8,
+		small: $sm-gap-9
+	),
+	l-h-gap-spaced: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	),
+	xl-h-gap-default: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	),
+	xl-h-gap-spaced: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	)
+);
+
+@include map-to-var-breakpoints($-components-h-gap);
+
+$sm-h-gap-default: var(--sm-h-gap-default);
+$sm-h-gap-spaced: var(--sm-h-gap-spaced);
+$m-h-gap-default: var(--m-h-gap-default);
+$m-h-gap-spaced: var(--m-h-gap-spaced);
+$l-h-gap-default: var(--l-h-gap-default);
+$l-h-gap-spaced: var(--l-h-gap-spaced);
+$xl-h-gap-default: var(--xl-h-gap-default);
+$xl-h-gap-spaced: var(--xl-h-gap-spaced);

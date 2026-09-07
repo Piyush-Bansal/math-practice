@@ -1,0 +1,80 @@
+@use '../../primitive/_time.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-duration: (
+	instant: (
+		large: $time-1,
+		medium: $time-1,
+		small: $time-1
+	),
+	quick-1: (
+		large: $time-2,
+		medium: $time-2,
+		small: $time-2
+	),
+	quick-2: (
+		large: $time-3,
+		medium: $time-3,
+		small: $time-3
+	),
+	quick-3: (
+		large: $time-4,
+		medium: $time-4,
+		small: $time-4
+	),
+	moderate-1: (
+		large: $time-5,
+		medium: $time-5,
+		small: $time-5
+	),
+	moderate-2: (
+		large: $time-6,
+		medium: $time-6,
+		small: $time-6
+	),
+	gentle-1: (
+		large: $time-7,
+		medium: $time-7,
+		small: $time-7
+	),
+	gentle-2: (
+		large: $time-8,
+		medium: $time-8,
+		small: $time-8
+	),
+	gentle-3: (
+		large: $time-9,
+		medium: $time-9,
+		small: $time-9
+	),
+	slow-1: (
+		large: $time-10,
+		medium: $time-10,
+		small: $time-10
+	),
+	slow-2: (
+		large: $time-11,
+		medium: $time-11,
+		small: $time-11
+	),
+	slow-3: (
+		large: $time-12,
+		medium: $time-12,
+		small: $time-12
+	)
+);
+
+@include map-to-var-breakpoints($-duration, 'dur-');
+
+$dur-instant: var(--dur-instant);
+$dur-quick-1: var(--dur-quick-1);
+$dur-quick-2: var(--dur-quick-2);
+$dur-quick-3: var(--dur-quick-3);
+$dur-moderate-1: var(--dur-moderate-1);
+$dur-moderate-2: var(--dur-moderate-2);
+$dur-gentle-1: var(--dur-gentle-1);
+$dur-gentle-2: var(--dur-gentle-2);
+$dur-gentle-3: var(--dur-gentle-3);
+$dur-slow-1: var(--dur-slow-1);
+$dur-slow-2: var(--dur-slow-2);
+$dur-slow-3: var(--dur-slow-3);

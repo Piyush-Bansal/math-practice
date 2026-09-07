@@ -1,0 +1,17 @@
+@use '../../semantic/clr/_error' as *;
+@use '../../semantic/clr/_warning' as *;
+@use '../../semantic/clr/_primary' as *;
+@use '../../semantic/clr/_information' as *;
+@use '../../semantic/clr/_neutral' as *;
+
+$clr-text-primary: $neutral-900;
+$clr-text-secondary: $primary-600;
+$clr-text-action: $information-300;
+$clr-text-action-hover: $information-400;
+$clr-text-disabled: $neutral-400;
+$clr-text-placeholder: $neutral-400;
+$clr-text-inverse: $neutral-100;
+$clr-text-success: $primary-600;
+$clr-text-info: $information-300;
+$clr-text-warning: $warning-400;
+$clr-text-error: $error-400;

@@ -1,0 +1,63 @@
+@use '../../../../semantic/space/_large-gaps' as *;
+@use '../../../../semantic/space/_small-gaps' as *;
+@use '../../../../../abstract/_mixins.scss' as *;
+
+$-xl-internal-gaps: (
+	s-ico-to-edge-gap: (
+		large: $sm-gap-8,
+		medium: $sm-gap-8,
+		small: $sm-gap-9
+	),
+	s-ico-text-gap: (
+		large: $sm-gap-7,
+		medium: $sm-gap-7,
+		small: $sm-gap-8
+	),
+	caption-to-edge: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	),
+	m-ico-to-edge-gap: (
+		large: $sm-gap-8,
+		medium: $sm-gap-8,
+		small: $sm-gap-9
+	),
+	m-ico-text-gap: (
+		large: $sm-gap-7,
+		medium: $sm-gap-7,
+		small: $sm-gap-8
+	),
+	body-to-edge-gap: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	),
+	l-ico-to-edge-gap: (
+		large: $sm-gap-8,
+		medium: $sm-gap-8,
+		small: $sm-gap-9
+	),
+	l-ico-text-gap: (
+		large: $sm-gap-7,
+		medium: $sm-gap-7,
+		small: $sm-gap-8
+	),
+	h4-to-edge-gap: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	)
+);
+
+@include map-to-var-breakpoints($-xl-internal-gaps, 'xl-');
+
+$xl-s-ico-to-edge-gap: var(--xl-s-ico-to-edge-gap);
+$xl-s-ico-text-gap: var(--xl-s-ico-text-gap);
+$xl-caption-to-edge: var(--xl-caption-to-edge);
+$xl-m-ico-to-edge-gap: var(--xl-m-ico-to-edge-gap);
+$xl-m-ico-text-gap: var(--xl-m-ico-text-gap);
+$xl-body-to-edge-gap: var(--xl-body-to-edge-gap);
+$xl-l-ico-to-edge-gap: var(--xl-l-ico-to-edge-gap);
+$xl-l-ico-text-gap: var(--xl-l-ico-text-gap);
+$xl-h4-to-edge-gap: var(--xl-h4-to-edge-gap);

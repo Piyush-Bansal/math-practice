@@ -1,0 +1,74 @@
+@use '../../../abstract/mixins' as *;
+
+//letter spacings
+$-letter-spacing-default: (
+	small-caption: (
+		large: 1%,
+		medium: 0,
+		small: 0
+	),
+	caption: (
+		large: 0,
+		medium: 0,
+		small: 0
+	),
+	body: (
+		large: 0,
+		medium: 0,
+		small: 0
+	),
+	h5: (
+		large: 0,
+		medium: 0,
+		small: 0
+	),
+	h4: (
+		large: 0,
+		medium: 0,
+		small: 0
+	),
+	h3: (
+		large: 0,
+		medium: 0,
+		small: 0
+	),
+	h2: (
+		large: 0.3%,
+		medium: 0.3%,
+		small: 0.3%
+	),
+	h1: (
+		large: -0.6%,
+		medium: -0.6%,
+		small: -0.6%
+	),
+	xl: (
+		large: -0.8%,
+		medium: -0.8%,
+		small: -0.8%
+	),
+	xxl: (
+		large: -1%,
+		medium: -1%,
+		small: -1%
+	),
+	xxxl: (
+		large: -1.6%,
+		medium: -1.6%,
+		small: -1.6%
+	)
+);
+
+@include map-to-var-breakpoints($-letter-spacing-default, 'ls-');
+
+$ls-small-caption: var(--ls-small-caption);
+$ls-caption: var(--ls-caption);
+$ls-body: var(--ls-body);
+$ls-h5: var(--ls-h5);
+$ls-h4: var(--ls-h4);
+$ls-h3: var(--ls-h3);
+$ls-h2: var(--ls-h2);
+$ls-h1: var(--ls-h1);
+$ls-xl: var(--ls-xl);
+$ls-xxl: var(--ls-xxl);
+$ls-xxxl: var(--ls-xxxl);

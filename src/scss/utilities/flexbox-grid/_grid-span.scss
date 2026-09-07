@@ -1,0 +1,24 @@
+@use '../../tokens/primitive/grid/_columns' as *;
+@use 'sass:map';
+
+@for $i from 1 through map.get($total-columns, total-columns, large) {
+	.span-#{$i} {
+		grid-column: span $i;
+	}
+}
+
+@for $i from 1 through map.get($total-columns, total-columns, medium) {
+	.span-#{$i}-md {
+		grid-column: span $i;
+	}
+}
+
+@for $i from 1 through map.get($total-columns, total-columns, small) {
+	.span-#{$i}-sm {
+		grid-column: span $i;
+	}
+}
+
+.end-to-end {
+	grid-column: 1 / -1;
+}

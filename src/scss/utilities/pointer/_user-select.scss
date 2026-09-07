@@ -1,0 +1,17 @@
+.select {
+	&-none {
+		user-select: none;
+	}
+
+	&-auto {
+		user-select: auto;
+	}
+
+	&-text {
+		user-select: text;
+	}
+
+	&-all {
+		user-select: all;
+	}
+}

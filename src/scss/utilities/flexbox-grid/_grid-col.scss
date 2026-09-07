@@ -1,0 +1,40 @@
+@use '../../tokens/primitive/grid' as *;
+@use '../../tokens/functional/space/page-setup' as *;
+@use '../../abstract/_mixins' as *;
+@use 'sass:map';
+
+@each $parent-key, $parent-value in $total-columns {
+	@each $key, $value in $parent-value {
+		@if $key == 'large' {
+			@for $i from 2 through $value {
+				.grid-col-#{$i} {
+					display: grid;
+					grid-template-columns: repeat($i, minmax(0, 1fr));
+					gap: map.get($page-full-gutter, gutter, $key);
+				}
+			}
+		}
+		@if $key == 'medium' {
+			@include mq('md') {
+				@for $i from 2 through $value {
+					.grid-col-#{$i}-md {
+						display: grid;
+						grid-template-columns: repeat($i, minmax(0, 1fr));
+						gap: map.get($page-full-gutter, gutter, $key);
+					}
+				}
+			}
+		}
+		@if $key == 'small' {
+			@include mq('sm') {
+				@for $i from 2 through $value {
+					.grid-col-#{$i}-sm {
+						display: grid;
+						grid-template-columns: repeat($i, minmax(0, 1fr));
+						gap: map.get($page-full-gutter, gutter, $key);
+					}
+				}
+			}
+		}
+	}
+}

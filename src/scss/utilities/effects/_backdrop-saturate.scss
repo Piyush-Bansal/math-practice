@@ -1,0 +1,7 @@
+@for $i from 0 through 200 {
+	@if $i % 25 == 0 {
+		.backdrop-saturate-#{$i} {
+			backdrop-filter: saturate(calc($i / 100));
+		}
+	}
+}

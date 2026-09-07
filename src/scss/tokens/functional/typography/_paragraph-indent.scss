@@ -1,0 +1,14 @@
+@use '../space/page-setup/_gutters.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-p-indent: (
+	paragraph-indent: (
+		large: $gutter,
+		medium: $gutter,
+		small: $gutter
+	)
+);
+
+@include map-to-var-breakpoints($-p-indent);
+
+$paragraph-indent: var(--paragraph-indent);

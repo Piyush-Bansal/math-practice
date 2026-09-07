@@ -1,0 +1,114 @@
+@use '../tokens/functional' as *;
+@use '../tokens/primitive/typography' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	//tap highlight color
+	-webkit-tap-highlight-color: transparent;
+	background-color: $clr-sur-page;
+
+	hanging-punctuation: first last;
+	color: $clr-text-primary;
+	font-family: $ff-base;
+
+	font-synthesis: none;
+	font-optical-sizing: auto;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+p,
+li {
+	max-width: 75ch;
+	text-wrap: pretty;
+}
+
+:where(
+	/* Document */
+	body,
+
+	/* Headings */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+
+	/* Paragraphs */
+	p,
+
+	/* Lists */
+	li,
+	dt,
+	dd,
+
+	/* Quotes */
+	blockquote,
+	q,
+	cite,
+
+	/* Tables */
+	caption,
+	th,
+	td,
+
+	/* Forms */
+	label,
+	button,
+	legend,
+	summary,
+	option,
+
+	/* Inline text containers */
+	span,
+	a,
+	strong,
+	em,
+	b,
+	i,
+	small,
+	mark,
+	time,
+	abbr,
+	dfn,
+	code,
+	kbd,
+	samp,
+	var,
+	sub,
+	sup,
+
+	/* Miscellaneous */
+	figcaption,
+
+	/* Custom typography utilities */
+	.xl,
+	.xxl,
+	.xxxl
+) {
+	text-box-trim: trim-both;
+	text-box-edge: cap alphabetic;
+}

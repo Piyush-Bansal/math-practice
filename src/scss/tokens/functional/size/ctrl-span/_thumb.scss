@@ -1,0 +1,45 @@
+@use '../../../semantic/size/_micro-widths.scss' as *;
+@use '../../../semantic/size/_width.scss' as *;
+@use '../../../../abstract/_mixins.scss' as *;
+
+$-thumb-span: (
+	quarter: (
+		large: $micro-width-xl,
+		medium: $micro-width-xl,
+		small: $micro-width-xl
+	),
+	half: (
+		large: $micro-width-xxxl,
+		medium: $micro-width-xxxl,
+		small: $micro-width-xxxxl
+	),
+	base: (
+		large: $width-2,
+		medium: $width-2,
+		small: $width-2
+	),
+	double: (
+		large: $width-4,
+		medium: $width-4,
+		small: $width-5
+	),
+	quad: (
+		large: $width-6,
+		medium: $width-6,
+		small: $width-8
+	),
+	hex: (
+		large: $width-7,
+		medium: $width-7,
+		small: $width-10
+	)
+);
+
+@include map-to-var-breakpoints($-thumb-span, 'thumb-span-');
+
+$thumb-span-quarter: var(--thumb-span-quarter);
+$thumb-span-half: var(--thumb-span-half);
+$thumb-span-base: var(--thumb-span-base);
+$thumb-span-double: var(--thumb-span-double);
+$thumb-span-quad: var(--thumb-span-quad);
+$thumb-span-hex: var(--thumb-span-hex);

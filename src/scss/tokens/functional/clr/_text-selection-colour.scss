@@ -1,0 +1,7 @@
+@use '../../semantic/clr/_neutral' as *;
+@use '../../semantic/clr/_primary' as *;
+
+$selection-bg-color: $primary-600;
+$selection-text-color: $neutral-100;
+$selection-bg-color-inverted: $neutral-100;
+$selection-text-color-inverted: $primary-600;

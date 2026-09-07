@@ -1,0 +1,32 @@
+@use '../_fixed-width.scss' as *;
+@use '../../../../abstract/_mixins.scss' as *;
+
+$-body-max-width: (
+	single-word: (
+		large: $col-wide-2,
+		medium: $col-wide-2,
+		small: $col-wide-3
+	),
+	few-words: (
+		large: $col-wide-3,
+		medium: $col-wide-3,
+		small: $col-wide-4
+	),
+	phrase: (
+		large: $col-wide-4,
+		medium: $col-wide-4,
+		small: $col-wide-5
+	),
+	reading-line: (
+		large: $col-wide-6,
+		medium: $col-wide-6,
+		small: $col-wide-5
+	)
+);
+
+@include map-to-var-breakpoints($-body-max-width, 'body-max-width');
+
+$body-max-width-single-word: var(--body-max-width-single-word);
+$body-max-width-few-words: var(--body-max-width-few-words);
+$body-max-width-phrase: var(--body-max-width-phrase);
+$body-max-width-reading-line: var(--body-max-width-reading-line);

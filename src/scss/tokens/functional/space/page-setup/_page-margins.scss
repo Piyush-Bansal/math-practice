@@ -1,0 +1,14 @@
+@use '../../../primitive/_spacers.scss' as *;
+@use '../../../../abstract/_mixins.scss' as *;
+
+$raw-page-margins: (
+	page-margins: (
+		large: $spacer-4,
+		medium: $spacer-2,
+		small: $spacer-1
+	)
+);
+
+@include map-to-var-breakpoints($raw-page-margins);
+
+$page-margins: var(--page-margins);

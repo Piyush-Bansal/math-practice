@@ -1,0 +1,6 @@
+$z-deep: -100; //Behind the document
+$z-ground: 0; //Part of the document
+$z-raised: 100; //Lifted but still belongs to the page
+$z-floating: 200; //Detached, but the page remains interactive
+$z-overlay: 300; //Takes ownership of the interface
+$z-top: 400;

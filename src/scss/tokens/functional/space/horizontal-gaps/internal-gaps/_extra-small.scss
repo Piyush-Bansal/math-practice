@@ -1,0 +1,14 @@
+@use '../../../../../abstract/_mixins' as *;
+@use '../../../../semantic/space/_small-gaps' as *;
+
+$-xs-internal-gaps: (
+	xs-caption-to-edge: (
+		large: $sm-gap-5,
+		medium: $sm-gap-5,
+		small: $sm-gap-5
+	)
+);
+
+@include map-to-var-breakpoints($-xs-internal-gaps);
+
+$xs-caption-to-edge: var(--xs-caption-to-edge);

@@ -1,0 +1,13 @@
+@use '../../../abstract/mixins' as *;
+
+$total-columns: (
+	total-columns: (
+		large: 15,
+		medium: 10,
+		small: 5
+	)
+);
+
+@include map-to-var-breakpoints($total-columns);
+
+$column-count: var(--total-columns);

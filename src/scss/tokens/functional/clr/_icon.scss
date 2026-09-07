@@ -1,0 +1,16 @@
+@use '../../semantic/clr/_error' as *;
+@use '../../semantic/clr/_warning' as *;
+@use '../../semantic/clr/_information' as *;
+@use '../../semantic/clr/_primary' as *;
+@use '../../semantic/clr/_neutral' as *;
+
+$clr-ico-primary: $neutral-900;
+$clr-ico-secondary: $primary-600;
+$clr-ico-action: $neutral-900;
+$clr-ico-action-inverse: $neutral-100;
+$clr-ico-success: $primary-600;
+$clr-ico-information: $information-400;
+$clr-ico-warning: $warning-300;
+$clr-ico-error: $error-400;
+$clr-ico-selected: $primary-600;
+$clr-ico-disabled: $neutral-400;

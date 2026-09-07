@@ -1,0 +1,68 @@
+@use '../tokens/primitive/grid/breakpoint' as *;
+@use './functions' as *;
+@use 'sass:map';
+@use 'sass:meta';
+
+@mixin mq($size) {
+	@if map.has-key($breakpoints, $size) {
+		$breakpoint: map.get($breakpoints, $size);
+		@media screen and (max-width: calc($breakpoint * 1px)) {
+			@content;
+		}
+	} @else if meta.type-of($size) == number {
+		@if math.is-unitless($size) {
+			@error 'when using a number with @mq() make sure to include a unit';
+		} @else {
+			@media screen and (max-width: $size) {
+				@content;
+			}
+		}
+	} @else {
+		@error 'the keyword #{$size} is not in the $breakpoints map';
+	}
+}
+
+@mixin map-to-var-breakpoints($map, $key-prefix: '', $convert-to-em: false) {
+	:root {
+		@each $key-parent, $value-parent in $map {
+			$property-name: '--' + $key-prefix + $key-parent;
+
+			@each $key, $value in $value-parent {
+				@if ($key == 'large') {
+					& {
+						#{$property-name}: if(
+							sass($convert-to-em): #{fluid-l($value)}; else: #{$value}
+						);
+					}
+				} @else if($key == 'medium') {
+					@include mq('md') {
+						& {
+							#{$property-name}: if(
+								sass($convert-to-em): #{fluid-m($value)}; else: #{$value}
+							);
+						}
+					}
+				} @else {
+					@include mq('sm') {
+						& {
+							#{$property-name}: if(
+								sass($convert-to-em): #{fluid-s($value)}; else: #{$value}
+							);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin map-to-var($map, $key-prefix: '') {
+	:root {
+		@each $parent-key, $parent-value in $map {
+			@each $key, $value in $parent-value {
+				$property-name: '--' + $key-prefix + $parent-key + '-' + $key;
+				#{$property-name}: #{$value};
+			}
+		}
+	}
+}

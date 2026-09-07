@@ -1,0 +1,14 @@
+@use '../space/page-setup/_gutters.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-p-spacing: (
+	paragraph-spacing: (
+		large: $half-gutter,
+		medium: $half-gutter,
+		small: $half-gutter
+	)
+);
+
+@include map-to-var-breakpoints($-p-spacing);
+
+$paragraph-spacing: var(--paragraph-spacing);

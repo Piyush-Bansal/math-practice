@@ -1,0 +1,62 @@
+@use '../../../../semantic/space/_small-gaps' as *;
+@use '../../../../../abstract/_mixins' as *;
+
+$-m-internal-gaps: (
+	s-ico-to-edge-gap: (
+		large: $sm-gap-7,
+		medium: $sm-gap-6,
+		small: $sm-gap-8
+	),
+	s-ico-text-gap: (
+		large: $sm-gap-6,
+		medium: $sm-gap-5,
+		small: $sm-gap-7
+	),
+	caption-to-edge: (
+		large: $sm-gap-8,
+		medium: $sm-gap-7,
+		small: $sm-gap-9
+	),
+	m-ico-to-edge-gap: (
+		large: $sm-gap-6,
+		medium: $sm-gap-6,
+		small: $sm-gap-7
+	),
+	m-ico-text-gap: (
+		large: $sm-gap-5,
+		medium: $sm-gap-5,
+		small: $sm-gap-6
+	),
+	body-to-edge-gap: (
+		large: $sm-gap-7,
+		medium: $sm-gap-7,
+		small: $sm-gap-8
+	),
+	l-ico-to-edge-gap: (
+		large: $sm-gap-5,
+		medium: $sm-gap-5,
+		small: $sm-gap-6
+	),
+	l-ico-text-gap: (
+		large: $sm-gap-4,
+		medium: $sm-gap-4,
+		small: $sm-gap-5
+	),
+	h4-to-edge-gap: (
+		large: $sm-gap-6,
+		medium: $sm-gap-6,
+		small: $sm-gap-7
+	)
+);
+
+@include map-to-var-breakpoints($-m-internal-gaps, 'm-');
+
+$m-s-ico-to-edge-gap: var(--m-s-ico-to-edge-gap);
+$m-s-ico-text-gap: var(--m-s-ico-text-gap);
+$m-caption-to-edge: var(--m-caption-to-edge);
+$m-m-ico-to-edge-gap: var(--m-m-ico-to-edge-gap);
+$m-m-ico-text-gap: var(--m-m-ico-text-gap);
+$m-body-to-edge-gap: var(--m-body-to-edge-gap);
+$m-l-ico-to-edge-gap: var(--m-l-ico-to-edge-gap);
+$m-l-ico-text-gap: var(--m-l-ico-text-gap);
+$m-h4-to-edge-gap: var(--m-h4-to-edge-gap);

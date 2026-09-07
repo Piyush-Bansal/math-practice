@@ -1,0 +1,32 @@
+@use '../../semantic/size/_min-widths.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-min-widths: (
+	size-s: (
+		large: $min-width-5,
+		medium: $min-width-5,
+		small: $min-width-6
+	),
+	size-m: (
+		large: $min-width-6,
+		medium: $min-width-6,
+		small: $min-width-9
+	),
+	size-l: (
+		large: $min-width-8,
+		medium: $min-width-8,
+		small: $min-width-9
+	),
+	size-xl: (
+		large: $min-width-9,
+		medium: $min-width-9,
+		small: $min-width-9
+	)
+);
+
+@include map-to-var-breakpoints($-min-widths, 'min-comp');
+
+$min-comp-size-s: var(--min-comp-size-s);
+$min-comp-size-m: var(--min-comp-size-m);
+$min-comp-size-l: var(--min-comp-size-l);
+$min-comp-size-xl: var(--min-comp-size-xl);

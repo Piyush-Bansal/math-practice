@@ -1,0 +1,27 @@
+@use '../../semantic/size/_micro-heights.scss' as *;
+@use '../../semantic/size/_height.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-control-sizes: (
+	point: (
+		large: $micro-height-xxxxl,
+		medium: $micro-height-xxxxl,
+		small: $micro-height-xxxxxl
+	),
+	thumb: (
+		large: $height-2,
+		medium: $height-2,
+		small: $height-2
+	),
+	button: (
+		large: $height-3,
+		medium: $height-3,
+		small: $height-3
+	)
+);
+
+@include map-to-var-breakpoints($-control-sizes, 'ctrl-size-');
+
+$ctrl-size-point: var(--ctrl-size-point);
+$ctrl-size-thumb: var(--ctrl-size-thumb);
+$ctrl-size-button: var(--ctrl-size-button);

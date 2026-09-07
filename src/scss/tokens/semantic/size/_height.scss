@@ -1,0 +1,68 @@
+@use '../../primitive/_spacers.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-heights: (
+	height-1: (
+		large: $spacer-1,
+		medium: $spacer-1,
+		small: $spacer-1
+	),
+	height-2: (
+		large: $spacer-2,
+		medium: $spacer-2,
+		small: $spacer-2
+	),
+	height-3: (
+		large: $spacer-3,
+		medium: $spacer-3,
+		small: $spacer-3
+	),
+	height-4: (
+		large: $spacer-4,
+		medium: $spacer-4,
+		small: $spacer-4
+	),
+	height-5: (
+		large: $spacer-5,
+		medium: $spacer-5,
+		small: $spacer-5
+	),
+	height-6: (
+		large: $spacer-6,
+		medium: $spacer-6,
+		small: $spacer-6
+	),
+	height-7: (
+		large: $spacer-7,
+		medium: $spacer-7,
+		small: $spacer-7
+	),
+	height-8: (
+		large: $spacer-8,
+		medium: $spacer-8,
+		small: $spacer-8
+	),
+	height-9: (
+		large: $spacer-9,
+		medium: $spacer-9,
+		small: $spacer-9
+	),
+	height-10: (
+		large: $spacer-10,
+		medium: $spacer-10,
+		small: $spacer-10
+	)
+);
+
+@include map-to-var-breakpoints($-heights);
+
+$height-1: var(--height-1);
+$height-2: var(--height-2);
+$height-3: var(--height-3);
+$height-4: var(--height-4);
+$height-5: var(--height-5);
+$height-6: var(--height-6);
+$height-7: var(--height-7);
+$height-8: var(--height-8);
+$height-9: var(--height-9);
+$height-10: var(--height-10);

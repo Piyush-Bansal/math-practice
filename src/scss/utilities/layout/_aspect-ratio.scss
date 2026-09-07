@@ -1,0 +1,20 @@
+@use '../../abstract/' as *;
+@use '../../tokens/' as *;
+
+@each $ratio, $value in $ratios {
+	.ar-#{$ratio} {
+		aspect-ratio: #{$value};
+	}
+
+	@include mq('md') {
+		.ar-md-#{$ratio} {
+			aspect-ratio: #{$value};
+		}
+	}
+
+	@include mq('sm') {
+		.ar-sm-#{$ratio} {
+			aspect-ratio: #{$value};
+		}
+	}
+}

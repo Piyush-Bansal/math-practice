@@ -1,0 +1,8 @@
+.bg-img {
+	&-fixed {
+		background-attachment: fixed;
+	}
+	&-local {
+		background-attachment: local;
+	}
+}

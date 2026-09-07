@@ -1,0 +1,25 @@
+.text {
+	&-center {
+		text-align: center;
+	}
+
+	&-right {
+		text-align: right;
+	}
+
+	&-left {
+		text-align: left;
+	}
+
+	&-justify {
+		text-align: justify;
+	}
+
+	&-start {
+		text-align: start;
+	}
+
+	&-end {
+		text-align: end;
+	}
+}

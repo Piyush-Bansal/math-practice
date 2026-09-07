@@ -1,0 +1,19 @@
+$breakpoints: (
+	sm: 767,
+	md: 1023
+);
+
+//change these values
+$ss-large-high: 1920;
+$ss-large-low: 1024;
+$ss-medium-high: 1023;
+$ss-medium-low: 768;
+$ss-small-high: 767;
+$ss-small-low: 320;
+
+//Design size
+$ss-artboard-lg: 1432;
+$ss-artboard-md: 881;
+$ss-artboard-sm: 354;
+
+////PLEASE DON'T FORGET TO UPDATE BREAKPOINTS-STORE

@@ -1,0 +1,43 @@
+@use '../../../../abstract/_mixins' as *;
+@use '../../../semantic/space/_large-gaps' as *;
+@use '../../../semantic/space/_small-gaps' as *;
+
+$-general-h-gap: (
+	h-gap-1: (
+		large: $sm-gap-5,
+		medium: $sm-gap-5,
+		small: $sm-gap-5
+	),
+	h-gap-2: (
+		large: $sm-gap-6,
+		medium: $sm-gap-6,
+		small: $sm-gap-6
+	),
+	h-gap-3: (
+		large: $sm-gap-7,
+		medium: $sm-gap-7,
+		small: $sm-gap-7
+	),
+	h-gap-4: (
+		large: $sm-gap-8,
+		medium: $sm-gap-8,
+		small: $sm-gap-8
+	),
+	h-gap-5: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $sm-gap-9
+	),
+	h-gap-6: (
+		small: $lg-gap-1
+	)
+);
+
+@include map-to-var-breakpoints($-general-h-gap);
+
+$h-gap-1: var(--h-gap-1);
+$h-gap-2: var(--h-gap-2);
+$h-gap-3: var(--h-gap-3);
+$h-gap-4: var(--h-gap-4);
+$h-gap-5: var(--h-gap-5);
+$h-gap-6: var(--h-gap-6);

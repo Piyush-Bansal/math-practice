@@ -1,0 +1,74 @@
+@use '../../../abstract/mixins' as *;
+
+//line height
+$-letter-spacing-uppercase: (
+	small-caption: (
+		large: 0,
+		medium: 0,
+		small: 0
+	),
+	caption: (
+		large: 0,
+		medium: 0,
+		small: 0
+	),
+	body: (
+		large: 0,
+		medium: 0,
+		small: 0
+	),
+	h5: (
+		large: 0,
+		medium: 0,
+		small: 0
+	),
+	h4: (
+		large: 0,
+		medium: 0,
+		small: 0
+	),
+	h3: (
+		large: 0,
+		medium: 0,
+		small: 0
+	),
+	h2: (
+		large: 0.3%,
+		medium: 0.3%,
+		small: 0.3%
+	),
+	h1: (
+		large: -0.6%,
+		medium: -0.6%,
+		small: -0.6%
+	),
+	xl: (
+		large: -0.8%,
+		medium: -0.8%,
+		small: -0.8%
+	),
+	xxl: (
+		large: -1%,
+		medium: -1%,
+		small: -1%
+	),
+	xxxl: (
+		large: -1.6%,
+		medium: -1.6%,
+		small: -1.6%
+	)
+);
+
+@include map-to-var-breakpoints($-letter-spacing-uppercase, 'uppercase-ls-');
+
+$uppercase-ls-small-caption: var(--uppercase-ls-small-caption);
+$uppercase-ls-caption: var(--uppercase-ls-caption);
+$uppercase-ls-body: var(--uppercase-ls-body);
+$uppercase-ls-h5: var(--uppercase-ls-h5);
+$uppercase-ls-h4: var(--uppercase-ls-h4);
+$uppercase-ls-h3: var(--uppercase-ls-h3);
+$uppercase-ls-h2: var(--uppercase-ls-h2);
+$uppercase-ls-h1: var(--uppercase-ls-h1);
+$uppercase-ls-xl: var(--uppercase-ls-xl);
+$uppercase-ls-xxl: var(--uppercase-ls-xxl);
+$uppercase-ls-xxxl: var(--uppercase-ls-xxxl);

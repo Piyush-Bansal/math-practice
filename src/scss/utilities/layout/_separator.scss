@@ -1,0 +1,32 @@
+@use '../../tokens/functional' as *;
+
+.separator {
+	display: block;
+	height: $stroke-hairline;
+	background-color: $clr-bdr-default;
+
+	&[data-size='full'] {
+		padding-inline: 0;
+	}
+
+	&[data-size='right-extended'] {
+		padding-left: $page-margins;
+		padding-right: calc($page-margins - $half-gutter);
+	}
+
+	&[data-size='left-extended'] {
+		padding-left: calc($page-margins - $half-gutter);
+		padding-right: $page-margins;
+	}
+
+	&[data-size='left-right-extended'] {
+		padding-inline: calc($page-margins - $half-gutter);
+	}
+}
+
+.vertical-separator {
+	display: block;
+	width: $stroke-hairline;
+	height: 100%;
+	background-color: $clr-bdr-default;
+}

@@ -1,0 +1,158 @@
+@use 'sass:math';
+@use 'sass:meta';
+@use 'sass:string';
+@use '../tokens/primitive/grid/_breakpoint' as *;
+
+//fluid size
+@function fluid-l($val) {
+	// Type check
+	@if meta.type-of($val) != 'number' {
+		@error "fluid-l($val): Expected a number, got #{meta.type-of($val)}.";
+	}
+
+	// Unit check
+	@if not math.is-unitless($val) {
+		@error "fluid-l($val): Value must be unitless (design pixel value). Received #{$val}.";
+	}
+
+	// Optional positivity check
+	@if $val < 0 {
+		@error "fluid-l($val): Value must be greater than zero. Received #{$val}.";
+	}
+
+	@if $val==0 {
+		@return 0;
+	}
+
+	// Scale sizes
+	$max-size: math.div($val, $ss-artboard-lg) * $ss-large-high;
+	$min-size: math.div($val, $ss-artboard-lg) * $ss-large-low;
+
+	// Convert to rem
+	$max-rem: math.div($max-size, 16) * 1rem;
+	$min-rem: math.div($min-size, 16) * 1rem;
+
+	// Convert viewport bounds to rem
+	$min-vw: math.div($ss-large-low, 16) * 1rem;
+	$max-vw: math.div($ss-large-high, 16) * 1rem;
+
+	$preferred: calc(
+		#{$min-rem} + (#{$max-rem} - #{$min-rem}) *
+			((100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}))
+	);
+
+	@return clamp(#{$min-rem}, #{$preferred}, #{$max-rem});
+}
+
+@function fluid-l-var($var-name) {
+	// $var-name is a string like '--x', not a number
+
+	// Precompute constant coefficients (Sass math, compile time)
+	$max-coef: math.div($ss-large-high, $ss-artboard-lg * 16); // unitless
+	$min-coef: math.div($ss-large-low, $ss-artboard-lg * 16);  // unitless
+
+	$min-vw: math.div($ss-large-low, 16) * 1rem;
+	$max-vw: math.div($ss-large-high, 16) * 1rem;
+
+	// These are now CSS calc() expressions, not Sass numbers
+	$max-rem: calc(var(#{$var-name}) * #{$max-coef} * 1rem);
+	$min-rem: calc(var(#{$var-name}) * #{$min-coef} * 1rem);
+
+	$preferred: calc(
+		#{$min-rem} + (#{$max-rem} - #{$min-rem}) *
+			((100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}))
+	);
+
+	@return clamp(#{$min-rem}, #{$preferred}, #{$max-rem});
+}
+
+@function fluid-m($val) {
+	// Type check
+	@if meta.type-of($val) != 'number' {
+		@error "fluid-l($val): Expected a number, got #{meta.type-of($val)}.";
+	}
+
+	// Unit check
+	@if not math.is-unitless($val) {
+		@error "fluid-l($val): Value must be unitless (design pixel value). Received #{$val}.";
+	}
+
+	// Optional positivity check
+	@if $val < 0 {
+		@error "fluid-l($val): Value must be greater than zero. Received #{$val}.";
+	}
+
+	@if $val==0 {
+		@return 0;
+	}
+
+	// Scale sizes
+	$max-size: math.div($val, $ss-artboard-md) * $ss-medium-high;
+	$min-size: math.div($val, $ss-artboard-md) * $ss-medium-low;
+
+	// Convert to rem
+	$max-rem: math.div($max-size, 16) * 1rem;
+	$min-rem: math.div($min-size, 16) * 1rem;
+
+	// Convert viewport bounds to rem
+	$min-vw: math.div($ss-medium-low, 16) * 1rem;
+	$max-vw: math.div($ss-medium-high, 16) * 1rem;
+
+	$preferred: calc(
+		#{$min-rem} + (#{$max-rem} - #{$min-rem}) *
+			((100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}))
+	);
+
+	@return clamp(#{$min-rem}, #{$preferred}, #{$max-rem});
+}
+
+@function fluid-s($val) {
+	// Type check
+	@if meta.type-of($val) != 'number' {
+		@error "fluid-l($val): Expected a number, got #{meta.type-of($val)}.";
+	}
+
+	// Unit check
+	@if not math.is-unitless($val) {
+		@error "fluid-l($val): Value must be unitless (design pixel value). Received #{$val}.";
+	}
+
+	// Optional positivity check
+	@if $val < 0 {
+		@error "fluid-l($val): Value must be greater than zero. Received #{$val}.";
+	}
+
+	@if $val==0 {
+		@return 0;
+	}
+
+	// Scale sizes
+	$max-size: math.div($val, $ss-artboard-sm) * $ss-small-high;
+	$min-size: math.div($val, $ss-artboard-sm) * $ss-small-low;
+
+	// Convert to rem
+	$max-rem: math.div($max-size, 16) * 1rem;
+	$min-rem: math.div($min-size, 16) * 1rem;
+
+	// Convert viewport bounds to rem
+	$min-vw: math.div($ss-small-low, 16) * 1rem;
+	$max-vw: math.div($ss-small-high, 16) * 1rem;
+
+	$preferred: calc(
+		#{$min-rem} + (#{$max-rem} - #{$min-rem}) *
+			((100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}))
+	);
+
+	@return clamp(#{$min-rem}, #{$preferred}, #{$max-rem});
+}
+
+@function str-replace($string, $search, $replace: '') {
+	$index: string.index($string, $search);
+
+	@if $index {
+		@return string.slice($string, 1, $index - 1) + $replace +
+			string.slice($string, $index + string.length($search));
+	}
+
+	@return $string;
+}

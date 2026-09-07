@@ -1,0 +1,117 @@
+@use '../../semantic/space/_small-gaps.scss' as *;
+@use '../../semantic/space/_large-gaps.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$typescale-spacers: (
+	small-caption-default: (
+		large: $sm-gap-6,
+		medium: $sm-gap-6,
+		small: $sm-gap-8
+	),
+	small-caption-spaced: (
+		large: $sm-gap-7,
+		medium: $sm-gap-8,
+		small: $sm-gap-8
+	),
+	caption-default: (
+		large: $sm-gap-7,
+		medium: $sm-gap-7,
+		small: $sm-gap-8
+	),
+	caption-spaced: (
+		large: $sm-gap-8,
+		medium: $lg-gap-1,
+		small: $sm-gap-9
+	),
+	body-default: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	),
+	body-spaced: (
+		large: $lg-gap-2,
+		medium: $lg-gap-2,
+		small: $lg-gap-2
+	),
+	h4-default: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	),
+	h4-spaced: (
+		large: $lg-gap-2,
+		medium: $lg-gap-2,
+		small: $lg-gap-2
+	),
+	h3-default: (
+		large: $lg-gap-2,
+		medium: $lg-gap-2,
+		small: $lg-gap-2
+	),
+	h3-spaced: (
+		large: $lg-gap-3,
+		medium: $lg-gap-3,
+		small: $lg-gap-3
+	),
+	h2-default: (
+		large: $lg-gap-3,
+		medium: $lg-gap-3,
+		small: $lg-gap-3
+	),
+	h2-spaced: (
+		large: $lg-gap-4,
+		medium: $lg-gap-4,
+		small: $lg-gap-4
+	),
+	h1-default: (
+		large: $lg-gap-4,
+		medium: $lg-gap-4,
+		small: $lg-gap-3
+	),
+	h1-spaced: (
+		large: $lg-gap-5,
+		medium: $lg-gap-5,
+		small: $lg-gap-4
+	),
+	xl-default: (
+		large: $lg-gap-5,
+		medium: $lg-gap-5,
+		small: $lg-gap-5
+	),
+	xl-spaced: (
+		large: $lg-gap-6,
+		medium: $lg-gap-6,
+		small: $lg-gap-6
+	),
+	xxl-default: (
+		large: $lg-gap-6,
+		medium: $lg-gap-6,
+		small: $lg-gap-5
+	),
+	xxl-spaced: (
+		large: $lg-gap-7,
+		medium: $lg-gap-7,
+		small: $lg-gap-6
+	)
+);
+
+@include map-to-var-breakpoints($typescale-spacers, 'ts-');
+
+$ts-small-caption-default: var(--ts-small-caption-default);
+$ts-small-caption-spaced: var(--ts-small-caption-spaced);
+$ts-caption-default: var(--ts-caption-default);
+$ts-caption-spaced: var(--ts-caption-spaced);
+$ts-body-default: var(--ts-body-default);
+$ts-body-spaced: var(--ts-body-spaced);
+$ts-h4-default: var(--ts-h4-default);
+$ts-h4-spaced: var(--ts-h4-spaced);
+$ts-h3-default: var(--ts-h3-default);
+$ts-h3-spaced: var(--ts-h3-spaced);
+$ts-h2-default: var(--ts-h2-default);
+$ts-h2-spaced: var(--ts-h2-spaced);
+$ts-h1-default: var(--ts-h1-default);
+$ts-h1-spaced: var(--ts-h1-spaced);
+$ts-xl-default: var(--ts-xl-default);
+$ts-xl-spaced: var(--ts-xl-spaced);
+$ts-xxl-default: var(--ts-xxl-default);
+$ts-xxl-spaced: var(--ts-xxl-spaced);

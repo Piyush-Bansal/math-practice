@@ -1,0 +1,81 @@
+@use '../../../../abstract/_mixins' as *;
+@use '../../../semantic/space/_small-gaps' as *;
+@use '../../../semantic/space/_large-gaps' as *;
+
+$-typography-h-gaps: (
+	caption-h-gap-default: (
+		large: $sm-gap-4,
+		medium: $sm-gap-4,
+		small: $sm-gap-4
+	),
+	caption-h-gap-spaced: (
+		large: $sm-gap-5,
+		medium: $sm-gap-5,
+		small: $sm-gap-5
+	),
+	body-h-gap-default: (
+		large: $sm-gap-4,
+		medium: $sm-gap-4,
+		small: $sm-gap-4
+	),
+	body-h-gap-spaced: (
+		large: $sm-gap-6,
+		medium: $sm-gap-5,
+		small: $sm-gap-6
+	),
+	h4-h-gap-default: (
+		large: $sm-gap-5,
+		medium: $sm-gap-5,
+		small: $sm-gap-5
+	),
+	h4-h-gap-spaced: (
+		large: $sm-gap-7,
+		medium: $sm-gap-6,
+		small: $sm-gap-7
+	),
+	h3-h-gap-default: (
+		large: $sm-gap-6,
+		medium: $sm-gap-6,
+		small: $sm-gap-6
+	),
+	h3-h-gap-spaced: (
+		large: $sm-gap-8,
+		medium: $sm-gap-7,
+		small: $sm-gap-8
+	),
+	h2-h-gap-default: (
+		large: $sm-gap-7,
+		medium: $sm-gap-7,
+		small: $sm-gap-7
+	),
+	h2-h-gap-spaced: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	),
+	h1-h-gap-default: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	),
+	h1-h-gap-spaced: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	)
+);
+
+@include map-to-var-breakpoints($-typography-h-gaps);
+
+$caption-h-gap-default: var(--caption-h-gap-default);
+$caption-h-gap-spaced: var(--caption-h-gap-spaced);
+$body-h-gap-default: var(--body-h-gap-default);
+$body-h-gap-spaced: var(--body-h-gap-spaced);
+$h4-h-gap-default: var(--h4-h-gap-default);
+$h4-h-gap-spaced: var(--h4-h-gap-spaced);
+$h3-h-gap-default: var(--h3-h-gap-default);
+$h3-h-gap-spaced: var(--h3-h-gap-spaced);
+$h2-h-gap-default: var(--h2-h-gap-default);
+$h2-h-gap-spaced: var(--h2-h-gap-spaced);
+$h1-h-gap-default: var(--h1-h-gap-default);
+$h1-h-gap-spaced: var(--h1-h-gap-spaced);

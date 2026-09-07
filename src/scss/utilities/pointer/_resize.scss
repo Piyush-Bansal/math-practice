@@ -1,0 +1,17 @@
+.resize {
+	&-none {
+		resize: none;
+	}
+
+	&-both {
+		resize: both;
+	}
+
+	&-x {
+		resize: horizontal;
+	}
+
+	&-y {
+		resize: vertical;
+	}
+}

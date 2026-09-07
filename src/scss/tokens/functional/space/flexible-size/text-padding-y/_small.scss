@@ -1,0 +1,29 @@
+@use '../../../../../abstract/_mixins.scss' as *;
+
+$-text-padding-y: (
+	caption: (
+		large: 8,
+		medium: 8,
+		small: 7
+	),
+	body: (
+		large: 7.5,
+		medium: 7.5,
+		small: 6.5
+	),
+	h4: (
+		large: 5,
+		medium: 5.5,
+		small: 5
+	)
+);
+
+@include map-to-var-breakpoints(
+	$map: $-text-padding-y,
+	$key-prefix: 'text-padding-y-small-',
+	$convert-to-em: true
+);
+
+$text-padding-y-small-caption: var(--text-padding-y-small-caption);
+$text-padding-y-small-body: var(--text-padding-y-small-body);
+$text-padding-y-small-h4: var(--text-padding-y-small-h4);

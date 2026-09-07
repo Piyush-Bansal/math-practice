@@ -1,0 +1,68 @@
+@use '../../primitive/_spacers.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-min-widths: (
+	min-width-1: (
+		large: $spacer-1,
+		medium: $spacer-1,
+		small: $spacer-1
+	),
+	min-width-2: (
+		large: $spacer-2,
+		medium: $spacer-2,
+		small: $spacer-2
+	),
+	min-width-3: (
+		large: $spacer-3,
+		medium: $spacer-3,
+		small: $spacer-3
+	),
+	min-width-4: (
+		large: $spacer-4,
+		medium: $spacer-4,
+		small: $spacer-4
+	),
+	min-width-5: (
+		large: $spacer-5,
+		medium: $spacer-5,
+		small: $spacer-5
+	),
+	min-width-6: (
+		large: $spacer-6,
+		medium: $spacer-6,
+		small: $spacer-6
+	),
+	min-width-7: (
+		large: $spacer-7,
+		medium: $spacer-7,
+		small: $spacer-7
+	),
+	min-width-8: (
+		large: $spacer-8,
+		medium: $spacer-8,
+		small: $spacer-8
+	),
+	min-width-9: (
+		large: $spacer-9,
+		medium: $spacer-9,
+		small: $spacer-9
+	),
+	min-width-10: (
+		large: $spacer-10,
+		medium: $spacer-10,
+		small: $spacer-10
+	)
+);
+
+@include map-to-var-breakpoints($-min-widths);
+
+$min-width-1: var(--min-width-1);
+$min-width-2: var(--min-width-2);
+$min-width-3: var(--min-width-3);
+$min-width-4: var(--min-width-4);
+$min-width-5: var(--min-width-5);
+$min-width-6: var(--min-width-6);
+$min-width-7: var(--min-width-7);
+$min-width-8: var(--min-width-8);
+$min-width-9: var(--min-width-9);
+$min-width-10: var(--min-width-10);

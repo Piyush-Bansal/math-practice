@@ -1,0 +1,29 @@
+@use '../../../../../abstract/_mixins.scss' as *;
+
+$-unframed: (
+	caption-ico-offset: (
+		large: 3.5,
+		medium: 4,
+		small: 3
+	),
+	body-ico-offset: (
+		large: 4,
+		medium: 4,
+		small: 4
+	),
+	h4-ico-offset: (
+		large: 5,
+		medium: 5.5,
+		small: 5
+	)
+);
+
+@include map-to-var-breakpoints(
+	$map: $-unframed,
+	$key-prefix: 'unframed',
+	$convert-to-em: true
+);
+
+$unframed-caption-ico-offset: var(--unframed-caption-ico-offset);
+$unframed-body-ico-offset: var(--unframed-body-ico-offset);
+$unframed-h4-ico-offset: var(--unframed-h4-ico-offset);

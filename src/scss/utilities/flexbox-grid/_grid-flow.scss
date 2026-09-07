@@ -1,0 +1,21 @@
+.grid-flow {
+	&-row {
+		grid-auto-flow: row;
+	}
+
+	&-column {
+		grid-auto-flow: column;
+	}
+
+	&-row-dense {
+		grid-auto-flow: row dense;
+	}
+
+	&-col-dense {
+		grid-auto-flow: column dense;
+	}
+
+	&-dense {
+		grid-auto-flow: dense;
+	}
+}

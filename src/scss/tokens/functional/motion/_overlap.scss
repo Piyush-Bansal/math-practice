@@ -1,0 +1,40 @@
+@use '../../../abstract/_mixins' as *;
+@use '../../primitive/_time' as *;
+
+$-overlap: (
+	tight-1: (
+		large: $time-1,
+		medium: $time-1,
+		small: $time-1
+	),
+	tight-2: (
+		large: $time-2,
+		medium: $time-2,
+		small: $time-2
+	),
+	tight-3: (
+		large: $time-3,
+		medium: $time-3,
+		small: $time-3
+	),
+	medium-4: (
+		large: $time-4,
+		medium: $time-4,
+		small: $time-4
+	),
+	medium-5: (
+		large: $time-5,
+		medium: $time-5,
+		small: $time-5
+	)
+);
+
+@include map-to-var-breakpoints($-overlap, 'overlap-');
+
+$overlap-tight-1: var(--overlap-tight-1);
+$overlap-tight-2: var(--overlap-tight-2);
+$overlap-tight-3: var(--overlap-tight-3);
+$overlap-medium-4: var(--overlap-medium-4);
+$overlap-medium-5: var(--overlap-medium-5);
+
+//30-70% of animation duration

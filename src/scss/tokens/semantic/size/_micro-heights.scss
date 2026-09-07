@@ -1,0 +1,60 @@
+@use '../../primitive/_micro-spacers.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-micro-heights: (
+	micro-height-xs: (
+		large: $micro-1,
+		medium: $micro-1,
+		small: $micro-1
+	),
+	micro-height-s: (
+		large: $micro-2,
+		medium: $micro-2,
+		small: $micro-2
+	),
+	micro-height-m: (
+		large: $micro-3,
+		medium: $micro-3,
+		small: $micro-3
+	),
+	micro-height-l: (
+		large: $micro-4,
+		medium: $micro-4,
+		small: $micro-4
+	),
+	micro-height-xl: (
+		large: $micro-5,
+		medium: $micro-5,
+		small: $micro-5
+	),
+	micro-height-xxl: (
+		large: $micro-6,
+		medium: $micro-6,
+		small: $micro-6
+	),
+	micro-height-xxxl: (
+		large: $micro-7,
+		medium: $micro-7,
+		small: $micro-7
+	),
+	micro-height-xxxxl: (
+		large: $micro-8,
+		medium: $micro-8,
+		small: $micro-8
+	),
+	micro-height-xxxxxl: (
+		small: $micro-9
+	)
+);
+
+@include map-to-var-breakpoints($-micro-heights);
+
+$micro-height-xs: var(--micro-height-xs);
+$micro-height-s: var(--micro-height-s);
+$micro-height-m: var(--micro-height-m);
+$micro-height-l: var(--micro-height-l);
+$micro-height-xl: var(--micro-height-xl);
+$micro-height-xxl: var(--micro-height-xxl);
+$micro-height-xxxl: var(--micro-height-xxxl);
+$micro-height-xxxxl: var(--micro-height-xxxxl);
+$micro-height-xxxxxl: var(--micro-height-xxxxxl);

@@ -1,0 +1,7 @@
+@for $i from 0 through 200 {
+	@if $i % 25 == 0 {
+		.backdrop-brightness-#{$i} {
+			backdrop-filter: brightness(calc($i / 100));
+		}
+	}
+}

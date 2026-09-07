@@ -1,0 +1,7 @@
+@for $i from 0 through 200 {
+	@if $i % 25 == 0 {
+		.backdrop-contrast-#{$i} {
+			backdrop-filter: contrast(calc($i / 100));
+		}
+	}
+}

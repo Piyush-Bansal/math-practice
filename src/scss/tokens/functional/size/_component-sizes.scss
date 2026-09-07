@@ -1,0 +1,38 @@
+@use '../../semantic/size/_height.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-component-sizes: (
+	xs: (
+		large: $height-1,
+		medium: $height-1,
+		small: $height-1
+	),
+	s: (
+		large: $height-2,
+		medium: $height-2,
+		small: $height-2
+	),
+	m: (
+		large: $height-3,
+		medium: $height-3,
+		small: $height-4
+	),
+	l: (
+		large: $height-4,
+		medium: $height-4,
+		small: $height-5
+	),
+	xl: (
+		large: $height-5,
+		medium: $height-5,
+		small: $height-7
+	)
+);
+
+@include map-to-var-breakpoints($-component-sizes, 'comp-size-');
+
+$comp-size-xs: var(--comp-size-xs);
+$comp-size-s: var(--comp-size-s);
+$comp-size-m: var(--comp-size-m);
+$comp-size-l: var(--comp-size-l);
+$comp-size-xl: var(--comp-size-xl);

@@ -1,0 +1,8 @@
+@use '../../tokens/primitive/grid/_columns' as *;
+@use '../../tokens/functional/space/page-setup/_gutters' as *;
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat($column-count, minmax(0, 1fr));
+	gap: $gutter;
+}

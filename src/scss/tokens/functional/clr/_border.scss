@@ -1,0 +1,15 @@
+@use '../../semantic/clr/_error' as *;
+@use '../../semantic/clr/_warning' as *;
+@use '../../semantic/clr/_information' as *;
+@use '../../semantic/clr/_primary' as *;
+@use '../../semantic/clr/_neutral' as *;
+
+$clr-bdr-default: $neutral-900;
+$clr-bdr-subtle: $neutral-300;
+$clr-bdr-action: $neutral-900;
+$clr-bdr-focus: $primary-600;
+$clr-bdr-success: $primary-600;
+$clr-bdr-selected: $primary-600;
+$clr-bdr-information: $information-400;
+$clr-bdr-warning: $warning-300;
+$clr-bdr-error: $error-400;

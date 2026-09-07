@@ -1,0 +1,83 @@
+@use '../../primitive/_spacers' as *;
+@use '../../../abstract/_mixins' as *;
+
+$-fixed-widths: (
+	col-wide-1: (
+		large: 72,
+		medium: 68,
+		small: 48
+	),
+	col-wide-2: (
+		large: 162,
+		medium: 153,
+		small: 115
+	),
+	col-wide-3: (
+		large: 252,
+		medium: 238,
+		small: 182
+	),
+	col-wide-4: (
+		large: 342,
+		medium: 323,
+		small: 249
+	),
+	col-wide-5: (
+		large: 432,
+		medium: 408,
+		small: 316
+	),
+	col-wide-6: (
+		large: 522,
+		medium: 493
+	),
+	col-wide-7: (
+		large: 612,
+		medium: 578
+	),
+	col-wide-8: (
+		large: 702,
+		medium: 663
+	),
+	col-wide-9: (
+		large: 792,
+		medium: 748
+	),
+	col-wide-10: (
+		large: 882,
+		medium: 833
+	),
+	col-wide-11: (
+		large: 972
+	),
+	col-wide-12: (
+		large: 1062
+	),
+	col-wide-13: (
+		large: 1152
+	),
+	col-wide-14: (
+		large: 1242
+	),
+	col-wide-15: (
+		large: 1332
+	)
+);
+
+@include map-to-var-breakpoints($map: $-fixed-widths, $convert-to-em: true);
+
+$col-wide-1: var(--col-wide-1);
+$col-wide-2: var(--col-wide-2);
+$col-wide-3: var(--col-wide-3);
+$col-wide-4: var(--col-wide-4);
+$col-wide-5: var(--col-wide-5);
+$col-wide-6: var(--col-wide-6);
+$col-wide-7: var(--col-wide-7);
+$col-wide-8: var(--col-wide-8);
+$col-wide-9: var(--col-wide-9);
+$col-wide-10: var(--col-wide-10);
+$col-wide-11: var(--col-wide-11);
+$col-wide-12: var(--col-wide-12);
+$col-wide-13: var(--col-wide-13);
+$col-wide-14: var(--col-wide-14);
+$col-wide-15: var(--col-wide-15);

@@ -1,0 +1,79 @@
+@use '../../abstract/_mixins' as *;
+
+$-duration: (
+	time-1: (
+		large: 83ms,
+		medium: 83ms,
+		small: 83ms
+	),
+	time-2: (
+		large: 117ms,
+		medium: 117ms,
+		small: 105ms
+	),
+	time-3: (
+		large: 166ms,
+		medium: 166ms,
+		small: 132ms
+	),
+	time-4: (
+		large: 235ms,
+		medium: 235ms,
+		small: 166ms
+	),
+	time-5: (
+		large: 332ms,
+		medium: 332ms,
+		small: 209ms
+	),
+	time-6: (
+		large: 470ms,
+		medium: 470ms,
+		small: 264ms
+	),
+	time-7: (
+		large: 664ms,
+		medium: 664ms,
+		small: 332ms
+	),
+	time-8: (
+		large: 939ms,
+		medium: 939ms,
+		small: 418ms
+	),
+	time-9: (
+		large: 1328ms,
+		medium: 1328ms,
+		small: 527ms
+	),
+	time-10: (
+		large: 1878ms,
+		medium: 1878ms,
+		small: 664ms
+	),
+	time-11: (
+		large: 2656ms,
+		medium: 2566ms,
+		small: 837ms
+	),
+	time-12: (
+		large: 3756ms,
+		medium: 3756ms,
+		small: 1054ms
+	)
+);
+
+@include map-to-var-breakpoints($-duration);
+
+$time-1: var(--time-1);
+$time-2: var(--time-2);
+$time-3: var(--time-3);
+$time-4: var(--time-4);
+$time-5: var(--time-5);
+$time-6: var(--time-6);
+$time-7: var(--time-7);
+$time-8: var(--time-8);
+$time-9: var(--time-9);
+$time-10: var(--time-10);
+$time-11: var(--time-11);
+$time-12: var(--time-12);

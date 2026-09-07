@@ -1,0 +1,32 @@
+@use '../_fixed-width.scss' as *;
+@use '../../../../abstract/_mixins.scss' as *;
+
+$-caption-max-width: (
+	single-word: (
+		large: $col-wide-2,
+		medium: $col-wide-2,
+		small: $col-wide-2
+	),
+	few-words: (
+		large: $col-wide-2,
+		medium: $col-wide-2,
+		small: $col-wide-3
+	),
+	phrase: (
+		large: $col-wide-4,
+		medium: $col-wide-4,
+		small: $col-wide-5
+	),
+	reading-line: (
+		large: $col-wide-5,
+		medium: $col-wide-5,
+		small: $col-wide-5
+	)
+);
+
+@include map-to-var-breakpoints($-caption-max-width, 'caption-max-width');
+
+$caption-max-width-single-word: var(--caption-max-width-single-word);
+$caption-max-width-few-words: var(--caption-max-width-few-words);
+$caption-max-width-phrase: var(--caption-max-width-phrase);
+$caption-max-width-reading-line: var(--caption-max-width-reading-line);

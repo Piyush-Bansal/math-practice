@@ -1,0 +1,12 @@
+@use '../../tokens/primitive' as *;
+
+@mixin body-settings {
+	letter-spacing: $ls-body;
+	line-height: $lh-body;
+	font-weight: $fw-regular;
+}
+
+@mixin font-family-accent {
+	font-family: $ff-accent;
+	font-weight: $fw-medium;
+}

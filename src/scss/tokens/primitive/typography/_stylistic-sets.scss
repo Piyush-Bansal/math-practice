@@ -1,0 +1,21 @@
+@mixin stylistic-sets-base {
+	font-feature-settings:
+		'salt' 0,
+		'aalt' 0,
+		'frac' 0,
+		'ordn' 0,
+		'liga' 0,
+		'sups' 0,
+		'kern' 0;
+}
+
+@mixin stylistic-sets-accent {
+	font-feature-settings:
+		'salt' 1,
+		'aalt' 1,
+		'frac' 1,
+		'ordn' 1,
+		'liga' 1,
+		'sups' 1,
+		'kern' 1;
+}

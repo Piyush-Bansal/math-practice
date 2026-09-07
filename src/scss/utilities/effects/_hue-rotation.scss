@@ -1,0 +1,7 @@
+@for $i from 0 through 360 {
+	@if $i % 30 == 0 {
+		.hue-rotation-#{$i} {
+			filter: hue-rotation($i * 1deg);
+		}
+	}
+}

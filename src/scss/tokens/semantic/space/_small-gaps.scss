@@ -1,0 +1,60 @@
+@use '../../primitive/_micro-spacers.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-small-gaps: (
+	sm-gap-1: (
+		large: $micro-1,
+		medium: $micro-1,
+		small: $micro-1
+	),
+	sm-gap-2: (
+		large: $micro-2,
+		medium: $micro-2,
+		small: $micro-2
+	),
+	sm-gap-3: (
+		large: $micro-3,
+		medium: $micro-3,
+		small: $micro-3
+	),
+	sm-gap-4: (
+		large: $micro-4,
+		medium: $micro-4,
+		small: $micro-4
+	),
+	sm-gap-5: (
+		large: $micro-5,
+		medium: $micro-5,
+		small: $micro-5
+	),
+	sm-gap-6: (
+		large: $micro-6,
+		medium: $micro-6,
+		small: $micro-6
+	),
+	sm-gap-7: (
+		large: $micro-7,
+		medium: $micro-7,
+		small: $micro-7
+	),
+	sm-gap-8: (
+		large: $micro-8,
+		medium: $micro-8,
+		small: $micro-8
+	),
+	sm-gap-9: (
+		small: $micro-9
+	)
+);
+
+@include map-to-var-breakpoints($-small-gaps);
+
+$sm-gap-1: var(--sm-gap-1);
+$sm-gap-2: var(--sm-gap-2);
+$sm-gap-3: var(--sm-gap-3);
+$sm-gap-4: var(--sm-gap-4);
+$sm-gap-5: var(--sm-gap-5);
+$sm-gap-6: var(--sm-gap-6);
+$sm-gap-7: var(--sm-gap-7);
+$sm-gap-8: var(--sm-gap-8);
+$sm-gap-9: var(--sm-gap-9);

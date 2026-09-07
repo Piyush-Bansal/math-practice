@@ -1,0 +1,60 @@
+@use '../../primitive/_micro-spacers.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-micro-widths: (
+	micro-width-xs: (
+		large: $micro-1,
+		medium: $micro-1,
+		small: $micro-1
+	),
+	micro-width-s: (
+		large: $micro-2,
+		medium: $micro-2,
+		small: $micro-2
+	),
+	micro-width-m: (
+		large: $micro-3,
+		medium: $micro-3,
+		small: $micro-3
+	),
+	micro-width-l: (
+		large: $micro-4,
+		medium: $micro-4,
+		small: $micro-4
+	),
+	micro-width-xl: (
+		large: $micro-5,
+		medium: $micro-5,
+		small: $micro-5
+	),
+	micro-width-xxl: (
+		large: $micro-6,
+		medium: $micro-6,
+		small: $micro-6
+	),
+	micro-width-xxxl: (
+		large: $micro-7,
+		medium: $micro-7,
+		small: $micro-7
+	),
+	micro-width-xxxxl: (
+		large: $micro-8,
+		medium: $micro-8,
+		small: $micro-8
+	),
+	micro-width-xxxxxl: (
+		small: $micro-9
+	)
+);
+
+@include map-to-var-breakpoints($-micro-widths);
+
+$micro-width-xs: var(--micro-width-xs);
+$micro-width-s: var(--micro-width-s);
+$micro-width-m: var(--micro-width-m);
+$micro-width-l: var(--micro-width-l);
+$micro-width-xl: var(--micro-width-xl);
+$micro-width-xxl: var(--micro-width-xxl);
+$micro-width-xxxl: var(--micro-width-xxxl);
+$micro-width-xxxxl: var(--micro-width-xxxxl);
+$micro-width-xxxxxl: var(--micro-width-xxxxxl);

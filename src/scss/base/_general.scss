@@ -1,0 +1,17 @@
+@use '../tokens/functional' as *;
+
+* {
+	caret-color: $clr-text-primary;
+}
+
+::selection {
+	background-color: $clr-sur-primary;
+	color: $clr-text-inverse;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	:has(:target) {
+		scroll-behavior: smooth;
+		scroll-padding-top: $v-gap-4;
+	}
+}

@@ -1,0 +1,72 @@
+@use '../../primitive/_micro-spacers.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-br: (
+	br-none: (
+		large: 0,
+		medium: 0,
+		small: 0
+	),
+	br-xs: (
+		large: $micro-1,
+		medium: $micro-1,
+		small: $micro-1
+	),
+	br-s: (
+		large: $micro-2,
+		medium: $micro-2,
+		small: $micro-2
+	),
+	br-m: (
+		large: $micro-3,
+		medium: $micro-3,
+		small: $micro-3
+	),
+	br-l: (
+		large: $micro-4,
+		medium: $micro-4,
+		small: $micro-4
+	),
+	br-xl: (
+		large: $micro-5,
+		medium: $micro-5,
+		small: $micro-5
+	),
+	br-xxl: (
+		large: $micro-6,
+		medium: $micro-6,
+		small: $micro-6
+	),
+	br-xxxl: (
+		large: $micro-7,
+		medium: $micro-7,
+		small: $micro-7
+	),
+	br-xxxxl: (
+		large: $micro-8,
+		medium: $micro-8,
+		small: $micro-8
+	),
+	br-xxxxxl: (
+		small: $micro-9
+	),
+	br-50: (
+		large: 50%,
+		medium: 50%,
+		small: 50%
+	)
+);
+
+@include map-to-var-breakpoints($-br);
+
+$br-none: var(--br-none);
+$br-xs: var(--br-xs);
+$br-s: var(--br-s);
+$br-m: var(--br-m);
+$br-l: var(--br-l);
+$br-xl: var(--br-xl);
+$br-xxl: var(--br-xxl);
+$br-xxxl: var(--br-xxxl);
+$br-xxxxl: var(--br-xxxxl);
+$br-xxxxxl: var(--br-xxxxxl);
+$br-50: var(--br-50);

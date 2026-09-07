@@ -1,0 +1,32 @@
+@use '../../semantic/size/_micro-heights.scss' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-stroke: (
+	hairline: (
+		large: $micro-height-xs,
+		medium: $micro-height-xs,
+		small: $micro-height-xs
+	),
+	default: (
+		large: $micro-height-s,
+		medium: $micro-height-s,
+		small: $micro-height-s
+	),
+	strong: (
+		large: $micro-height-l,
+		medium: $micro-height-l,
+		small: $micro-height-l
+	),
+	emphasis: (
+		large: $micro-height-xxl,
+		medium: $micro-height-xxl,
+		small: $micro-height-xxl
+	)
+);
+
+@include map-to-var-breakpoints($-stroke, 'stroke-');
+
+$stroke-hairline: var(--stroke-hairline);
+$stroke-default: var(--stroke-default);
+$stroke-strong: var(--stroke-strong);
+$stroke-emphasis: var(--stroke-emphasis);

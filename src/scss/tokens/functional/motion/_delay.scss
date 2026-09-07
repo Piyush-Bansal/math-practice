@@ -1,0 +1,32 @@
+@use '../../../abstract/_mixins' as *;
+@use '../../primitive/_time' as *;
+
+$-delay: (
+	micro: (
+		large: $time-2,
+		medium: $time-2,
+		small: $time-2
+	),
+	short: (
+		large: $time-4,
+		medium: $time-4,
+		small: $time-4
+	),
+	medium: (
+		large: $time-7,
+		medium: $time-7,
+		small: $time-7
+	),
+	long: (
+		large: $time-10,
+		medium: $time-10,
+		small: $time-10
+	)
+);
+
+@include map-to-var-breakpoints($-delay, 'delay-');
+
+$delay-micro: var(--delay-micro);
+$delay-short: var(--delay-short);
+$delay-medium: var(--delay-medium);
+$delay-long: var(--delay-long);

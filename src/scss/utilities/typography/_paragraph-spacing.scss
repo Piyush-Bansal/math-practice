@@ -1,0 +1,10 @@
+@use '../../tokens/functional' as *;
+@use '../../tokens/primitive/typography' as *;
+
+.p-space p:not(:last-of-type) {
+	margin-bottom: $paragraph-spacing;
+}
+
+.p-indent p:not(:first-of-type) {
+	text-indent: $paragraph-indent;
+}

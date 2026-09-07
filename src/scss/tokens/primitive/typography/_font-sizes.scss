@@ -1,0 +1,68 @@
+@use '../../../abstract/mixins' as *;
+
+//font sizes
+$font-sizes: (
+	small-caption: (
+		large: 10.3,
+		medium: 9.5,
+		small: 11.9
+	),
+	caption: (
+		large: 12.2,
+		medium: 11.4,
+		small: 13.4
+	),
+	body: (
+		large: 14.5,
+		medium: 13.5,
+		small: 15
+	),
+	h4: (
+		large: 20.5,
+		medium: 19.1,
+		small: 18.9
+	),
+	h3: (
+		large: 29,
+		medium: 27,
+		small: 23.8
+	),
+	h2: (
+		large: 41,
+		medium: 38.2,
+		small: 30
+	),
+	h1: (
+		large: 58,
+		medium: 54,
+		small: 37.8
+	),
+	xl: (
+		large: 82,
+		medium: 76.4,
+		small: 47.6
+	),
+	xxl: (
+		large: 116,
+		medium: 108,
+		small: 60
+	),
+	xxxl: (
+		large: 164,
+		medium: 152.7,
+		small: 75.6
+	)
+);
+
+@include map-to-var-breakpoints($font-sizes, 'fs-', true);
+
+$fs-small-caption: var(--fs-small-caption);
+$fs-caption: var(--fs-caption);
+$fs-body: var(--fs-body);
+$fs-h4: var(--fs-h4);
+$fs-h3: var(--fs-h3);
+$fs-h2: var(--fs-h2);
+$fs-h1: var(--fs-h1);
+$fs-xl: var(--fs-xl);
+$fs-xxl: var(--fs-xxl);
+$fs-xxxl: var(--fs-xxxl);

@@ -1,0 +1,48 @@
+@use '../../semantic/space/_small-gaps' as *;
+@use '../../semantic/space/_large-gaps' as *;
+@use '../../../abstract/_mixins.scss' as *;
+
+$-container-padding: (
+	cntr-pad-x-1: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1,
+		small: $lg-gap-1
+	),
+	cntr-pad-y-1: (
+		large: $sm-gap-8,
+		medium: $sm-gap-8,
+		small: $sm-gap-9
+	),
+	cntr-pad-x-2: (
+		large: $lg-gap-2,
+		medium: $lg-gap-2
+	),
+	cntr-pad-y-2: (
+		large: $lg-gap-1,
+		medium: $lg-gap-1
+	),
+	cntr-pad-x-3: (
+		large: $lg-gap-3,
+		medium: $lg-gap-3
+	),
+	cntr-pad-y-3: (
+		large: $lg-gap-2,
+		medium: $lg-gap-2
+	),
+	cntr-pad-x-4: (
+		large: $lg-gap-4
+	),
+	cntr-pad-y-4: (
+		large: $lg-gap-3
+	)
+);
+
+@include map-to-var-breakpoints($-container-padding);
+$cntr-pad-x-1: var(--cntr-pad-x-1);
+$cntr-pad-y-1: var(--cntr-pad-y-1);
+$cntr-pad-x-2: var(--cntr-pad-x-2);
+$cntr-pad-y-2: var(--cntr-pad-y-2);
+$cntr-pad-x-3: var(--cntr-pad-x-3);
+$cntr-pad-y-3: var(--cntr-pad-y-3);
+$cntr-pad-x-4: var(--cntr-pad-x-4);
+$cntr-pad-y-4: var(--cntr-pad-y-4);

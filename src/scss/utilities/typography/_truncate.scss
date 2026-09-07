@@ -1,0 +1,11 @@
+@for $i from 1 through 6 {
+	.truncate-#{$i} {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		line-clamp: $i;
+		display: -webkit-box;
+		-webkit-line-clamp: $i;
+		-webkit-box-orient: vertical;
+		white-space: normal;
+	}
+}

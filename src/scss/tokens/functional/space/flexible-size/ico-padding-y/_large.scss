@@ -1,0 +1,29 @@
+@use '../../../../../abstract/_mixins.scss' as *;
+
+$-ico-padding-y: (
+	s-ico: (
+		large: 17,
+		medium: 16,
+		small: 16
+	),
+	m-ico: (
+		large: 16,
+		medium: 15.5,
+		small: 14.5
+	),
+	l-ico: (
+		large: 12.5,
+		medium: 12,
+		small: 12
+	)
+);
+
+@include map-to-var-breakpoints(
+	$map: $-ico-padding-y,
+	$key-prefix: 'ico-padding-y-l-',
+	$convert-to-em: true
+);
+
+$ico-padding-y-l-s-ico: var(--ico-padding-y-l-s-ico);
+$ico-padding-y-l-m-ico: var(--ico-padding-y-l-m-ico);
+$ico-padding-y-l-l-ico: var(--ico-padding-y-l-l-ico);

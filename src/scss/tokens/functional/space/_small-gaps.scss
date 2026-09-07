@@ -1,0 +1,26 @@
+@use '../../../abstract/_mixins' as *;
+@use '../../semantic/space/_small-gaps' as *;
+
+$-small-gaps: (
+	tight: (
+		large: $sm-gap-1,
+		medium: $sm-gap-1,
+		small: $sm-gap-1
+	),
+	default: (
+		large: $sm-gap-2,
+		medium: $sm-gap-2,
+		small: $sm-gap-2
+	),
+	loose: (
+		large: $sm-gap-4,
+		medium: $sm-gap-4,
+		small: $sm-gap-4
+	)
+);
+
+@include map-to-var-breakpoints($-small-gaps, 'sm-gap-');
+
+$sm-gap-tight: var(--sm-gap-tight);
+$sm-gap-default: var(--sm-gap-default);
+$sm-gap-loose: var(--sm-gap-loose);

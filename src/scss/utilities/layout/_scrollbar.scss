@@ -1,0 +1,9 @@
+.hide-scroll-bar {
+	-webkit-overflow-scrolling: touch; /* Optional: Enables smooth scrolling on iOS */
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+
+	&::-webkit-scrollbar {
+		display: none; /* Safari and Chrome */
+	}
+}
