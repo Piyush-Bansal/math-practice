@@ -22,8 +22,10 @@ export class CardState {
 			if (!this.distance || !this.bounds || !this._index) return;
 			if (this.distance?.value < 150) {
 				globalState.selection.select(this._index);
+				console.log(globalState.selection.current);
 			} else {
 				globalState.selection.clear();
+				console.log(globalState.selection.current);
 			}
 		});
 	}
