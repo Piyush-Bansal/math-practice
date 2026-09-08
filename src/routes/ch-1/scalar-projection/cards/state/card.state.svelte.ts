@@ -23,10 +23,17 @@ export class CardState {
 			)
 	);
 
-	readonly movement = $derived(
-		this._dotProduct &&
-			useLinearInterpolate(-50, 50, -300, 300, useClamp(this._dotProduct, -300, 300))
-	);
+	readonly movement = $derived.by(() => {
+		if (!this._dotProduct || !this._bounds?.rect) return;
+		const halfWidth = this._bounds?.rect.width / 2;
+		return useLinearInterpolate(
+			-50,
+			50,
+			-halfWidth,
+			halfWidth,
+			useClamp(this._dotProduct, -halfWidth, halfWidth)
+		);
+	});
 
 	constructor(private readonly globalState: GlobalState) {
 		$effect(() => {

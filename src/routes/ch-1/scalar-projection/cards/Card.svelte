@@ -15,5 +15,6 @@
 		width: $size-7;
 		background-color: $clr-sur-action-1;
 		border-radius: $br-soft;
+		will-change: translate;
 	}
 </style>

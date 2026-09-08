@@ -14,7 +14,9 @@ class CardBehaviour {
 	}
 
 	yTo = $derived.by(
-		() => this._cardState.card && gsap.quickTo(this._cardState.card, 'y', { duration: 0.2 })
+		() =>
+			this._cardState.card &&
+			gsap.quickTo(this._cardState.card, 'y', { duration: 0.2, ease: 'power2.out' })
 	);
 }
 
