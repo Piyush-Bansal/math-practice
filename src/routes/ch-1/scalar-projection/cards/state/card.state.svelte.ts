@@ -23,7 +23,7 @@ export class CardState {
 
 	readonly movement = $derived(
 		this._dotProduct &&
-			useLinearInterpolate(-50, 50, -300, 300, useClamp(this._dotProduct, -50, 50))
+			useLinearInterpolate(-50, 50, -300, 300, useClamp(this._dotProduct, -300, 300))
 	);
 
 	constructor(private readonly globalState: GlobalState) {
