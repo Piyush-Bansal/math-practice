@@ -1,4 +1,5 @@
-import { useBounds, useNormalise } from '$lib/interactions';
+import { useBounds } from '$lib/interactions';
+import useLinearInterpolate from '$lib/interactions/resources/linearInterpolate.svelte';
 import type GlobalState from './global.state.svelte';
 
 export class CardState {
@@ -13,16 +14,20 @@ export class CardState {
 		return { x, y };
 	});
 
-	readonly dotProduct = $derived.by(
+	private readonly _dotProduct = $derived.by(
 		() =>
 			this._displacement &&
 			this._displacement?.x * this.globalState.axis.x +
 				this._displacement.y * this.globalState.axis.y
 	);
 
+	readonly movement = $derived(
+		this._dotProduct && useLinearInterpolate(-50, 50, -300, 300, this._dotProduct)
+	);
+
 	constructor(private readonly globalState: GlobalState) {
 		$effect(() => {
-			$inspect(this.dotProduct);
+			$inspect(this.movement);
 		});
 	}
 }

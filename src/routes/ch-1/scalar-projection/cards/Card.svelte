@@ -1,8 +1,10 @@
 <script lang="ts">
+	import CardBehaviour from './behaviour/card.behaviour.svelte';
 	import { CardState, getGlobalState } from './state';
 
 	const globalState = getGlobalState();
 	const localState = new CardState(globalState);
+	new CardBehaviour(localState);
 </script>
 
 <div class="card | ar-2-3" bind:this={localState.card}></div>
