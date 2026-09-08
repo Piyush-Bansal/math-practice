@@ -6,14 +6,16 @@ export class CardState {
 
 	private readonly _bounds = $derived(this.card && useBounds(this.card));
 
-	private readonly _direction = $derived.by(() => {
+	private readonly _displacement = $derived.by(() => {
 		if (!this._bounds) return;
-		return useDistance(this.globalState.pointer, this._bounds);
+		const x = this._bounds.rect.left + this._bounds.rect.width / 2 - this.globalState.pointer.x;
+		const y = this._bounds.rect.top + this._bounds.rect.height / 2 - this.globalState.pointer.y;
+		return { x, y };
 	});
 
 	constructor(private readonly globalState: GlobalState) {
-		// $effect(() => {
-		// 	$inspect(this._direction);
-		// });
+		$effect(() => {
+			$inspect(this._displacement);
+		});
 	}
 }
