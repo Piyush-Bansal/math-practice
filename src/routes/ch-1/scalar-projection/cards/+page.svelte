@@ -1,13 +1,12 @@
 <script lang="ts">
 	import Card from './Card.svelte';
-	import { getGlobalState, setGlobalState } from './state';
+	import { setGlobalState } from './state';
 
 	setGlobalState();
-	const globalState = getGlobalState();
 </script>
 
 <div class="container | center">
-	<div class="card-wrapper" bind:this={globalState.cardWrapper}>
+	<div class="card-wrapper">
 		{#each { length: 5 }}
 			<Card />
 		{/each}

@@ -1,4 +1,4 @@
-import { useBounds, useDistance } from '$lib/interactions';
+import { useBounds, useNormalise } from '$lib/interactions';
 import type GlobalState from './global.state.svelte';
 
 export class CardState {
@@ -13,9 +13,16 @@ export class CardState {
 		return { x, y };
 	});
 
+	readonly dotProduct = $derived.by(
+		() =>
+			this._displacement &&
+			this._displacement?.x * this.globalState.axis.x +
+				this._displacement.y * this.globalState.axis.y
+	);
+
 	constructor(private readonly globalState: GlobalState) {
 		$effect(() => {
-			$inspect(this._displacement);
+			$inspect(this.dotProduct);
 		});
 	}
 }

@@ -3,8 +3,8 @@ import { getContext, setContext } from 'svelte';
 
 class GlobalState {
 	readonly pointer = usePointer();
-	cardWrapper = $state<HTMLDivElement>();
-	readonly wrapperPosition = $derived(this.cardWrapper && useBounds(this.cardWrapper).rect);
+
+	readonly axis = { x: 1, y: 0 };
 }
 
 const key = Symbol('GLOBAL_STATE');
