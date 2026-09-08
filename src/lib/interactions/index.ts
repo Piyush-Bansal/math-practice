@@ -5,6 +5,7 @@ export * from './observers/scrollIdle.svelte';
 export * from './resources/clampDelta.svelte';
 export * from './resources/clampValues.svelte';
 export * from './resources/decay.svelte';
+export * from './resources/dotProduct.svelte';
 export * from './resources/imageLoader.svelte';
 export * from './resources/lazyLoadImg.svelte';
 export * from './resources/lerp.svelte';
