@@ -12,8 +12,8 @@ export class CardState {
 	});
 
 	constructor(private readonly globalState: GlobalState) {
-		$effect(() => {
-			$inspect(this._direction);
-		});
+		// $effect(() => {
+		// 	$inspect(this._direction);
+		// });
 	}
 }

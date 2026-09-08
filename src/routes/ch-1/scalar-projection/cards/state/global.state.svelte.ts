@@ -2,9 +2,9 @@ import { useBounds, usePointer } from '$lib/interactions';
 import { getContext, setContext } from 'svelte';
 
 class GlobalState {
-	pointer = usePointer();
+	readonly pointer = usePointer();
 	cardWrapper = $state<HTMLDivElement>();
-	wrapperPosition = $derived(this.cardWrapper && useBounds(this.cardWrapper).rect);
+	readonly wrapperPosition = $derived(this.cardWrapper && useBounds(this.cardWrapper).rect);
 }
 
 const key = Symbol('GLOBAL_STATE');
