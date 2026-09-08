@@ -31,18 +31,26 @@
 		};
 	});
 
-	const direction = $derived.by(() => {
-		const magnitude = Math.hypot(displacement.x, displacement.y);
-		return {
-			x: displacement.x / magnitude,
-			y: displacement.y / magnitude
-		};
-	});
+	// const direction = $derived.by(() => {
+	// 	const magnitude = Math.hypot(displacement.x, displacement.y);
+	// 	if (magnitude > 0) {
+	// 		return {
+	// 			x: displacement.x / magnitude,
+	// 			y: displacement.y / magnitude
+	// 		};
+	// 	} else {
+	// 		return {
+	// 			x: 0,
+	// 			y: 0
+	// 		};
+	// 	}
+	// });
+
+	const strength = $derived(useClamp(1 - displacement.value / 200, 0, 1));
 
 	const movement = $derived.by(() => {
-		const offset = useClamp(displacement.value, 0, 40);
-		const x = displacement.value > 200 ? 0 : direction.x * offset;
-		const y = displacement.value > 200 ? 0 : direction.y * offset;
+		const x = strength < 0.1 ? 0 : useClamp(strength * displacement.x, -40, 40);
+		const y = strength < 0.1 ? 0 : useClamp(strength * displacement.y, -40, 40);
 		return { x, y };
 	});
 
